@@ -59,6 +59,22 @@ class LoginViewController: UIViewController {
         return checkbox
     }()
     
+    let rememberMeLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Remember Me"
+        label.font = UIFont.systemFont(ofSize: 15)
+        return label
+    }()
+    
+    let forgotPasswordLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Forgot Password?"
+        label.font = UIFont.systemFont(ofSize: 15)
+        return label
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .red
