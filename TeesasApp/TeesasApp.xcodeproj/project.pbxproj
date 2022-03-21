@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04050F9227E8E1CC00396D9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04050F9127E8E1CC00396D9D /* AppDelegate.swift */; };
+		04050F9427E8E1CC00396D9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04050F9327E8E1CC00396D9D /* SceneDelegate.swift */; };
+		04050F9627E8E1CC00396D9D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04050F9527E8E1CC00396D9D /* ViewController.swift */; };
+		04050F9927E8E1CC00396D9D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04050F9727E8E1CC00396D9D /* Main.storyboard */; };
+		04050F9B27E8E1CE00396D9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04050F9A27E8E1CE00396D9D /* Assets.xcassets */; };
+		04050F9E27E8E1CE00396D9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04050F9C27E8E1CE00396D9D /* LaunchScreen.storyboard */; };
+		04050FA927E8E1CE00396D9D /* TeesasAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04050FA827E8E1CE00396D9D /* TeesasAppTests.swift */; };
+		04050FB527E8E1CE00396D9D /* TeesasAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04050FB427E8E1CE00396D9D /* TeesasAppUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04050FA527E8E1CE00396D9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04050F8627E8E1CC00396D9D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04050F8D27E8E1CC00396D9D;
+			remoteInfo = TeesasApp;
+		};
+		04050FAF27E8E1CE00396D9D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04050F8627E8E1CC00396D9D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04050F8D27E8E1CC00396D9D;
+			remoteInfo = TeesasApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04050F8E27E8E1CC00396D9D /* TeesasApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeesasApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04050F9127E8E1CC00396D9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		04050F9327E8E1CC00396D9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		04050F9527E8E1CC00396D9D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04050F9827E8E1CC00396D9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04050F9A27E8E1CE00396D9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04050F9D27E8E1CE00396D9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04050F9F27E8E1CE00396D9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04050FA427E8E1CE00396D9D /* TeesasAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeesasAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04050FA827E8E1CE00396D9D /* TeesasAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeesasAppTests.swift; sourceTree = "<group>"; };
+		04050FAE27E8E1CE00396D9D /* TeesasAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeesasAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04050FB427E8E1CE00396D9D /* TeesasAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeesasAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04050F8B27E8E1CC00396D9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04050FA127E8E1CE00396D9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04050FAB27E8E1CE00396D9D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04050F8527E8E1CC00396D9D = {
+			isa = PBXGroup;
+			children = (
+				04050F9027E8E1CC00396D9D /* TeesasApp */,
+				04050FA727E8E1CE00396D9D /* TeesasAppTests */,
+				04050FB127E8E1CE00396D9D /* TeesasAppUITests */,
+				04050F8F27E8E1CC00396D9D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		04050F8F27E8E1CC00396D9D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04050F8E27E8E1CC00396D9D /* TeesasApp.app */,
+				04050FA427E8E1CE00396D9D /* TeesasAppTests.xctest */,
+				04050FAE27E8E1CE00396D9D /* TeesasAppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04050F9027E8E1CC00396D9D /* TeesasApp */ = {
+			isa = PBXGroup;
+			children = (
+				04050F9127E8E1CC00396D9D /* AppDelegate.swift */,
+				04050F9327E8E1CC00396D9D /* SceneDelegate.swift */,
+				04050F9527E8E1CC00396D9D /* ViewController.swift */,
+				04050F9727E8E1CC00396D9D /* Main.storyboard */,
+				04050F9A27E8E1CE00396D9D /* Assets.xcassets */,
+				04050F9C27E8E1CE00396D9D /* LaunchScreen.storyboard */,
+				04050F9F27E8E1CE00396D9D /* Info.plist */,
+			);
+			path = TeesasApp;
+			sourceTree = "<group>";
+		};
+		04050FA727E8E1CE00396D9D /* TeesasAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				04050FA827E8E1CE00396D9D /* TeesasAppTests.swift */,
+			);
+			path = TeesasAppTests;
+			sourceTree = "<group>";
+		};
+		04050FB127E8E1CE00396D9D /* TeesasAppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				04050FB427E8E1CE00396D9D /* TeesasAppUITestsLaunchTests.swift */,
+			);
+			path = TeesasAppUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04050F8D27E8E1CC00396D9D /* TeesasApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04050FB827E8E1CE00396D9D /* Build configuration list for PBXNativeTarget "TeesasApp" */;
+			buildPhases = (
+				04050F8A27E8E1CC00396D9D /* Sources */,
+				04050F8B27E8E1CC00396D9D /* Frameworks */,
+				04050F8C27E8E1CC00396D9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TeesasApp;
+			productName = TeesasApp;
+			productReference = 04050F8E27E8E1CC00396D9D /* TeesasApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04050FA327E8E1CE00396D9D /* TeesasAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04050FBB27E8E1CE00396D9D /* Build configuration list for PBXNativeTarget "TeesasAppTests" */;
+			buildPhases = (
+				04050FA027E8E1CE00396D9D /* Sources */,
+				04050FA127E8E1CE00396D9D /* Frameworks */,
+				04050FA227E8E1CE00396D9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04050FA627E8E1CE00396D9D /* PBXTargetDependency */,
+			);
+			name = TeesasAppTests;
+			productName = TeesasAppTests;
+			productReference = 04050FA427E8E1CE00396D9D /* TeesasAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		04050FAD27E8E1CE00396D9D /* TeesasAppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04050FBE27E8E1CE00396D9D /* Build configuration list for PBXNativeTarget "TeesasAppUITests" */;
+			buildPhases = (
+				04050FAA27E8E1CE00396D9D /* Sources */,
+				04050FAB27E8E1CE00396D9D /* Frameworks */,
+				04050FAC27E8E1CE00396D9D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04050FB027E8E1CE00396D9D /* PBXTargetDependency */,
+			);
+			name = TeesasAppUITests;
+			productName = TeesasAppUITests;
+			productReference = 04050FAE27E8E1CE00396D9D /* TeesasAppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04050F8627E8E1CC00396D9D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					04050F8D27E8E1CC00396D9D = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					04050FA327E8E1CE00396D9D = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 04050F8D27E8E1CC00396D9D;
+					};
+					04050FAD27E8E1CE00396D9D = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 04050F8D27E8E1CC00396D9D;
+					};
+				};
+			};
+			buildConfigurationList = 04050F8927E8E1CC00396D9D /* Build configuration list for PBXProject "TeesasApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04050F8527E8E1CC00396D9D;
+			productRefGroup = 04050F8F27E8E1CC00396D9D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04050F8D27E8E1CC00396D9D /* TeesasApp */,
+				04050FA327E8E1CE00396D9D /* TeesasAppTests */,
+				04050FAD27E8E1CE00396D9D /* TeesasAppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04050F8C27E8E1CC00396D9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04050F9E27E8E1CE00396D9D /* LaunchScreen.storyboard in Resources */,
+				04050F9B27E8E1CE00396D9D /* Assets.xcassets in Resources */,
+				04050F9927E8E1CC00396D9D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04050FA227E8E1CE00396D9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04050FAC27E8E1CE00396D9D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04050F8A27E8E1CC00396D9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04050F9627E8E1CC00396D9D /* ViewController.swift in Sources */,
+				04050F9227E8E1CC00396D9D /* AppDelegate.swift in Sources */,
+				04050F9427E8E1CC00396D9D /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04050FA027E8E1CE00396D9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04050FA927E8E1CE00396D9D /* TeesasAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04050FAA27E8E1CE00396D9D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04050FB527E8E1CE00396D9D /* TeesasAppUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04050FA627E8E1CE00396D9D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04050F8D27E8E1CC00396D9D /* TeesasApp */;
+			targetProxy = 04050FA527E8E1CE00396D9D /* PBXContainerItemProxy */;
+		};
+		04050FB027E8E1CE00396D9D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04050F8D27E8E1CC00396D9D /* TeesasApp */;
+			targetProxy = 04050FAF27E8E1CE00396D9D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		04050F9727E8E1CC00396D9D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04050F9827E8E1CC00396D9D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		04050F9C27E8E1CE00396D9D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04050F9D27E8E1CE00396D9D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04050FB627E8E1CE00396D9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		04050FB727E8E1CE00396D9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04050FB927E8E1CE00396D9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L5KQK28X5U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TeesasApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dev-tes.TeesasApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04050FBA27E8E1CE00396D9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L5KQK28X5U;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TeesasApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dev-tes.TeesasApp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		04050FBC27E8E1CE00396D9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L5KQK28X5U;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dev-tes.TeesasAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TeesasApp.app/TeesasApp";
+			};
+			name = Debug;
+		};
+		04050FBD27E8E1CE00396D9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L5KQK28X5U;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dev-tes.TeesasAppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TeesasApp.app/TeesasApp";
+			};
+			name = Release;
+		};
+		04050FBF27E8E1CE00396D9D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L5KQK28X5U;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dev-tes.TeesasAppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TeesasApp;
+			};
+			name = Debug;
+		};
+		04050FC027E8E1CE00396D9D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = L5KQK28X5U;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dev-tes.TeesasAppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TeesasApp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04050F8927E8E1CC00396D9D /* Build configuration list for PBXProject "TeesasApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04050FB627E8E1CE00396D9D /* Debug */,
+				04050FB727E8E1CE00396D9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04050FB827E8E1CE00396D9D /* Build configuration list for PBXNativeTarget "TeesasApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04050FB927E8E1CE00396D9D /* Debug */,
+				04050FBA27E8E1CE00396D9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04050FBB27E8E1CE00396D9D /* Build configuration list for PBXNativeTarget "TeesasAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04050FBC27E8E1CE00396D9D /* Debug */,
+				04050FBD27E8E1CE00396D9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04050FBE27E8E1CE00396D9D /* Build configuration list for PBXNativeTarget "TeesasAppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04050FBF27E8E1CE00396D9D /* Debug */,
+				04050FC027E8E1CE00396D9D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04050F8627E8E1CC00396D9D /* Project object */;
+}
