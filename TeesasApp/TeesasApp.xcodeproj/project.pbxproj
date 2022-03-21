@@ -20,6 +20,7 @@
 		04D5CEB427E91A3C0067043F /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5CEB327E91A3C0067043F /* BookmarkViewController.swift */; };
 		04D5CEB627E91A4C0067043F /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5CEB527E91A4C0067043F /* NotificationViewController.swift */; };
 		04D5CEB827E91A570067043F /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5CEB727E91A570067043F /* MoreViewController.swift */; };
+		04D5CEBC27E91C9D0067043F /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5CEBB27E91C9D0067043F /* UITextFieldExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		04D5CEB327E91A3C0067043F /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
 		04D5CEB527E91A4C0067043F /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		04D5CEB727E91A570067043F /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		04D5CEBB27E91C9D0067043F /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,14 +109,12 @@
 		04050F9027E8E1CC00396D9D /* TeesasApp */ = {
 			isa = PBXGroup;
 			children = (
-				04050F9127E8E1CC00396D9D /* AppDelegate.swift */,
-				04050F9327E8E1CC00396D9D /* SceneDelegate.swift */,
-				04050F9527E8E1CC00396D9D /* RegisterViewController.swift */,
-				04050F9A27E8E1CE00396D9D /* Assets.xcassets */,
-				04050F9C27E8E1CE00396D9D /* LaunchScreen.storyboard */,
+				04D5CEBA27E91C7F0067043F /* Extension */,
+				04D5CEBE27E91D9E0067043F /* Delegates */,
+				04D5CEBF27E91DC40067043F /* ViewControllers */,
+				04D5CEBD27E91D670067043F /* LaunchScreen */,
 				04050F9F27E8E1CE00396D9D /* Info.plist */,
-				04050FC127E8E79A00396D9D /* LoginViewController.swift */,
-				04D5CEB927E91B270067043F /* Dashboard */,
+				04050F9A27E8E1CE00396D9D /* Assets.xcassets */,
 			);
 			path = TeesasApp;
 			sourceTree = "<group>";
@@ -145,6 +145,41 @@
 				04D5CEB727E91A570067043F /* MoreViewController.swift */,
 			);
 			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		04D5CEBA27E91C7F0067043F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				04D5CEBB27E91C9D0067043F /* UITextFieldExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		04D5CEBD27E91D670067043F /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				04050F9C27E8E1CE00396D9D /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
+		04D5CEBE27E91D9E0067043F /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				04050F9127E8E1CC00396D9D /* AppDelegate.swift */,
+				04050F9327E8E1CC00396D9D /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		04D5CEBF27E91DC40067043F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				04D5CEB927E91B270067043F /* Dashboard */,
+				04050F9527E8E1CC00396D9D /* RegisterViewController.swift */,
+				04050FC127E8E79A00396D9D /* LoginViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,6 +317,7 @@
 				04050FC227E8E79A00396D9D /* LoginViewController.swift in Sources */,
 				04D5CEB627E91A4C0067043F /* NotificationViewController.swift in Sources */,
 				04050F9627E8E1CC00396D9D /* RegisterViewController.swift in Sources */,
+				04D5CEBC27E91C9D0067043F /* UITextFieldExtension.swift in Sources */,
 				04D5CEB427E91A3C0067043F /* BookmarkViewController.swift in Sources */,
 				04050F9227E8E1CC00396D9D /* AppDelegate.swift in Sources */,
 				04050F9427E8E1CC00396D9D /* SceneDelegate.swift in Sources */,
