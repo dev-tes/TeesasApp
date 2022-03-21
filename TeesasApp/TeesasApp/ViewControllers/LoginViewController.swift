@@ -82,6 +82,22 @@ class LoginViewController: UIViewController {
         return button
     }()
     
+    let orLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "OR"
+        label.font = UIFont.systemFont(ofSize: 15)
+        return label
+    }()
+    
+    let loginWithLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Login with"
+        label.font = UIFont.systemFont(ofSize: 15)
+        return label
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .red
