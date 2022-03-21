@@ -110,6 +110,21 @@ class LoginViewController: UIViewController {
         return button
     }()
     
+    let createNewAccountLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Create a new account?"
+        label.font = UIFont.systemFont(ofSize: 15)
+        return label
+    }()
+    
+    var registerButton: GreenButton = {
+        let button = GreenButton()
+        button.setTitle("Register", for: .normal)
+        button.addTarget(self, action: #selector(didTapRegisterButton), for: .touchUpInside)
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .red
@@ -124,5 +139,9 @@ class LoginViewController: UIViewController {
     
     @objc func didTapLoginButton() {
         navigationController?.pushViewController(MainTabBarViewController(), animated: true)
+    }
+    
+    @objc func didTapRegisterButton() {
+        navigationController?.pushViewController(RegisterViewController(), animated: true)
     }
 }
