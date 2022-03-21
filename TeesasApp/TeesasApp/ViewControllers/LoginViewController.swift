@@ -98,6 +98,18 @@ class LoginViewController: UIViewController {
         return label
     }()
     
+    var googleLoginButton: GoogleAndFacebook = {
+        let button = GoogleAndFacebook()
+        button.setImage(UIImage(named: "g.square.fill"), for: .normal)
+        return button
+    }()
+    
+    var facebookLoginButton: GoogleAndFacebook = {
+        let button = GoogleAndFacebook()
+        button.setImage(UIImage(named: "g.square.fill"), for: .normal)
+        return button
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .red

@@ -22,6 +22,7 @@
 		04D5CEB827E91A570067043F /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5CEB727E91A570067043F /* MoreViewController.swift */; };
 		04D5CEBC27E91C9D0067043F /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5CEBB27E91C9D0067043F /* UITextFieldExtension.swift */; };
 		04D5CEC227E9269F0067043F /* GreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5CEC127E9269F0067043F /* GreenButton.swift */; };
+		04D5CEC427E9288C0067043F /* GoogleAndFacebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5CEC327E9288C0067043F /* GoogleAndFacebook.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		04D5CEB727E91A570067043F /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		04D5CEBB27E91C9D0067043F /* UITextFieldExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		04D5CEC127E9269F0067043F /* GreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenButton.swift; sourceTree = "<group>"; };
+		04D5CEC327E9288C0067043F /* GoogleAndFacebook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAndFacebook.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				04D5CEC127E9269F0067043F /* GreenButton.swift */,
+				04D5CEC327E9288C0067043F /* GoogleAndFacebook.swift */,
 			);
 			path = Reusables;
 			sourceTree = "<group>";
@@ -323,6 +326,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04D5CEC427E9288C0067043F /* GoogleAndFacebook.swift in Sources */,
 				04D5CEB827E91A570067043F /* MoreViewController.swift in Sources */,
 				04D5CEB027E919EF0067043F /* MainTabBarViewController.swift in Sources */,
 				04D5CEC227E9269F0067043F /* GreenButton.swift in Sources */,
