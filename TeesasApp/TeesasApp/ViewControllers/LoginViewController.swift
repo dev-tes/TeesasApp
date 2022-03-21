@@ -75,7 +75,12 @@ class LoginViewController: UIViewController {
         return label
     }()
     
-    
+    var loginButton: GreenButton = {
+        let button = GreenButton()
+        button.setTitle("Login", for: .normal)
+        button.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
+        return button
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,5 +92,9 @@ class LoginViewController: UIViewController {
     
     @objc func toggleCheckboxSelection() {
         checkBoxButton.isSelected = !checkBoxButton.isSelected
+    }
+    
+    @objc func didTapLoginButton() {
+        navigationController?.pushViewController(MainTabBarViewController(), animated: true)
     }
 }
