@@ -17,12 +17,26 @@ class RegisterViewController: UIViewController {
         return button
     }()
     
-    let RegisterLabel: UILabel = {
+    let registerLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Register"
         label.font = UIFont.boldSystemFont(ofSize: 20)
         return label
+    }()
+    
+    let scrollView: UIScrollView = {
+        let scroll = UIScrollView()
+        scroll.backgroundColor = UIColor.systemBackground
+        scroll.translatesAutoresizingMaskIntoConstraints = false
+        scroll.showsVerticalScrollIndicator = false
+        return scroll
+    }()
+    
+    let contentView: UIView = {
+        let container = UIView()
+        container.translatesAutoresizingMaskIntoConstraints = false
+        return container
     }()
     
     let footnoteLabel: UILabel = {
@@ -177,11 +191,56 @@ class RegisterViewController: UIViewController {
         label.font = UIFont.systemFont(ofSize: 15)
         return label
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
+        navigationController?.navigationBar.isHidden = true
+        constraintViews()
     }
+    
+    func constraintViews() {
+        view.addSubview(backButton)
+                view.addSubview(registerLabel)
+        view.addSubview(scrollView)
+        scrollView.addSubview(contentView)
+        contentView.addSubview(footnoteLabel)
+//        contentView.addSubview(footnoteLabel)
+//        contentView.addSubview(footnoteLabel)
+//        contentView.addSubview(footnoteLabel)
+//        contentView.addSubview(footnoteLabel)
+//        contentView.addSubview(footnoteLabel)
+//        contentView.addSubview(footnoteLabel)
+//        contentView.addSubview(footnoteLabel)
+//        contentView.addSubview(footnoteLabel)
+//        contentView.addSubview(footnoteLabel)
+//        contentView.addSubview(footnoteLabel)
+//        contentView.addSubview(footnoteLabel)
+//        contentView.addSubview(footnoteLabel)
+//        contentView.addSubview(footnoteLabel)
+//        contentView.addSubview(footnoteLabel)
+        NSLayoutConstraint.activate([
+            backButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+            backButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            registerLabel.topAnchor.constraint(equalTo: backButton.topAnchor),
+            registerLabel.leadingAnchor.constraint(equalTo: backButton.trailingAnchor, constant: 20),
+            
+            scrollView.widthAnchor.constraint(equalTo: view.widthAnchor),
+            scrollView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            scrollView.topAnchor.constraint(equalTo: registerLabel.bottomAnchor, constant: 5),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
+            contentView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
+            contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            contentView.heightAnchor.constraint(equalToConstant: 1300),
+            
+            footnoteLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5),
+            footnoteLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20)
+        ])
+    }
+    
     
     @objc func backButtonPressed() {
         navigationController?.popViewController(animated: true)
