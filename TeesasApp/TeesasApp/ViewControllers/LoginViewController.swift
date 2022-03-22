@@ -9,11 +9,11 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    let LoginLabel: UILabel = {
+    let loginLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Login"
-        label.font = UIFont.systemFont(ofSize: 15)
+//        label.font = UIFont.systemFont(ofSize: 15)
         label.font = UIFont.boldSystemFont(ofSize: 20)
         return label
     }()
@@ -34,6 +34,7 @@ class LoginViewController: UIViewController {
         textField.layer.cornerRadius = 25
         textField.layer.backgroundColor = UIColor.white.cgColor
         textField.setPadding(left: 20, right: 20)
+        textField.placeholder = "Enter Phone Number"
         textField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         return textField
     }()
@@ -47,6 +48,7 @@ class LoginViewController: UIViewController {
         textField.layer.backgroundColor = UIColor.white.cgColor
         textField.setPadding(left: 20, right: 48)
         textField.isSecureTextEntry = true
+        textField.placeholder = "Enter Password"
         textField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         return textField
     }()
@@ -100,13 +102,15 @@ class LoginViewController: UIViewController {
     
     var googleLoginButton: GoogleAndFacebook = {
         let button = GoogleAndFacebook()
-        button.setImage(UIImage(named: "g.square.fill"), for: .normal)
+//        button.setImage(UIImage(named: "g.square.fill"), for: .normal)
+        button.addLeading(image: "g.square.fill", text: "Google")
         return button
     }()
     
     var facebookLoginButton: GoogleAndFacebook = {
         let button = GoogleAndFacebook()
-        button.setImage(UIImage(named: "g.square.fill"), for: .normal)
+        button.setImage(UIImage(systemName: "g.square.fill"), for: .normal)
+        button.addLeading(image: "g.square.fill", text: "Google")
         return button
     }()
     
@@ -127,8 +131,47 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        view.backgroundColor = .systemBackground
+        navigationController?.navigationBar.isHidden = true
+        constraintViews()
     }
+    
+    func constraintViews() {
+        view.addSubview(loginLabel)
+        view.addSubview(footerLabel)
+        view.addSubview(phoneNumberTextField)
+        view.addSubview(passwordTextField)
+//        view.addSubview(loginLabel)
+//        view.addSubview(loginLabel)
+//        view.addSubview(loginLabel)
+//        view.addSubview(loginLabel)
+//        view.addSubview(loginLabel)
+//        view.addSubview(loginLabel)
+//        view.addSubview(loginLabel)
+//        view.addSubview(loginLabel)
+//        view.addSubview(loginLabel)
+//        view.addSubview(loginLabel)
+        NSLayoutConstraint.activate([
+            loginLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
+            loginLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
+            footerLabel.topAnchor.constraint(equalTo: loginLabel.bottomAnchor, constant: 30),
+            footerLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            
+            phoneNumberTextField.topAnchor.constraint(equalTo: footerLabel.bottomAnchor, constant: 30),
+            phoneNumberTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            phoneNumberTextField.leadingAnchor.constraint(equalTo: footerLabel.leadingAnchor),
+            phoneNumberTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            phoneNumberTextField.heightAnchor.constraint(equalToConstant: 50),
+            
+            passwordTextField.topAnchor.constraint(equalTo: phoneNumberTextField.bottomAnchor, constant: 30),
+            passwordTextField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            passwordTextField.leadingAnchor.constraint(equalTo: footerLabel.leadingAnchor),
+            passwordTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            passwordTextField.heightAnchor.constraint(equalToConstant: 50),
+            
+        ])
+    }
+
     
     @objc func textFieldDidChange() {
     }
