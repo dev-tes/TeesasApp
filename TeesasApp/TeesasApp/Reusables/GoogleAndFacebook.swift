@@ -14,7 +14,6 @@ class GoogleAndFacebook: UIButton {
         translatesAutoresizingMaskIntoConstraints = false
         clipsToBounds = true
         layer.cornerRadius = 5
-        heightAnchor.constraint(equalToConstant: 54).isActive = true
     }
     
     required init?(coder: NSCoder) {

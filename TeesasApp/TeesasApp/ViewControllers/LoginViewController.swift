@@ -105,15 +105,21 @@ class LoginViewController: UIViewController {
     
     var googleLoginButton: GoogleAndFacebook = {
         let button = GoogleAndFacebook()
-//        button.setImage(UIImage(named: "g.square.fill"), for: .normal)
-        button.addLeading(image: "g.square.fill", text: "Google")
+        button.setTitle("google", for: .normal)
+        button.setImage(UIImage(systemName: "g.square.fill"), for: .normal)
+        button.tintColor = .none
+        button.layer.borderWidth = 0.5
+        button.layer.cornerRadius = 20
         return button
     }()
     
     var facebookLoginButton: GoogleAndFacebook = {
         let button = GoogleAndFacebook()
         button.setImage(UIImage(systemName: "g.square.fill"), for: .normal)
+        button.setTitle("facebook", for: .normal)
         button.addLeading(image: "g.square.fill", text: "Google")
+        button.layer.borderWidth = 0.5
+        button.layer.cornerRadius = 20
         return button
     }()
     
@@ -149,10 +155,10 @@ class LoginViewController: UIViewController {
         view.addSubview(rememberMeLabel)
         view.addSubview(forgotPasswordLabel)
         view.addSubview(loginButton)
-//        view.addSubview(loginLabel)
-//        view.addSubview(loginLabel)
-//        view.addSubview(loginLabel)
-//        view.addSubview(loginLabel)
+        view.addSubview(orLabel)
+        view.addSubview(loginWithLabel)
+        view.addSubview(googleLoginButton)
+        view.addSubview(facebookLoginButton)
 //        view.addSubview(loginLabel)
 //        view.addSubview(loginLabel)
         NSLayoutConstraint.activate([
@@ -185,8 +191,25 @@ class LoginViewController: UIViewController {
             loginButton.topAnchor.constraint(equalTo: forgotPasswordLabel.bottomAnchor, constant: 30),
             loginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             loginButton.heightAnchor.constraint(equalToConstant: 60),
-            loginButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.6)
+            loginButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.6),
             
+            orLabel.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 30),
+            orLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            loginWithLabel.topAnchor.constraint(equalTo: orLabel.bottomAnchor, constant: 30),
+            loginWithLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            googleLoginButton.topAnchor.constraint(equalTo: loginWithLabel.bottomAnchor, constant: 20),
+            googleLoginButton.trailingAnchor.constraint(equalTo: view.centerXAnchor, constant: -10),
+            googleLoginButton.heightAnchor.constraint(equalToConstant: 40),
+            googleLoginButton.widthAnchor.constraint(equalToConstant: 120),
+            
+            facebookLoginButton.topAnchor.constraint(equalTo: loginWithLabel.bottomAnchor, constant: 20),
+            facebookLoginButton.leadingAnchor.constraint(equalTo: view.centerXAnchor, constant: 10),
+            facebookLoginButton.heightAnchor.constraint(equalToConstant: 40),
+            facebookLoginButton.widthAnchor.constraint(equalToConstant: 120),
+
+
         ])
     }
 
