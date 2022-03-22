@@ -135,6 +135,7 @@ class LoginViewController: UIViewController {
         let button = GreenButton()
         button.setTitle("Register", for: .normal)
         button.addTarget(self, action: #selector(didTapRegisterButton), for: .touchUpInside)
+        button.layer.cornerRadius = 15
         return button
     }()
     
@@ -159,8 +160,8 @@ class LoginViewController: UIViewController {
         view.addSubview(loginWithLabel)
         view.addSubview(googleLoginButton)
         view.addSubview(facebookLoginButton)
-//        view.addSubview(loginLabel)
-//        view.addSubview(loginLabel)
+        view.addSubview(createNewAccountLabel)
+        view.addSubview(registerButton)
         NSLayoutConstraint.activate([
             loginLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
             loginLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
@@ -204,12 +205,18 @@ class LoginViewController: UIViewController {
             googleLoginButton.heightAnchor.constraint(equalToConstant: 40),
             googleLoginButton.widthAnchor.constraint(equalToConstant: 120),
             
-            facebookLoginButton.topAnchor.constraint(equalTo: loginWithLabel.bottomAnchor, constant: 20),
+            facebookLoginButton.topAnchor.constraint(equalTo: googleLoginButton.topAnchor),
             facebookLoginButton.leadingAnchor.constraint(equalTo: view.centerXAnchor, constant: 10),
             facebookLoginButton.heightAnchor.constraint(equalToConstant: 40),
             facebookLoginButton.widthAnchor.constraint(equalToConstant: 120),
-
-
+            
+            createNewAccountLabel.topAnchor.constraint(equalTo: googleLoginButton.bottomAnchor, constant: 20),
+            createNewAccountLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor, constant: -40),
+            
+            registerButton.topAnchor.constraint(equalTo: createNewAccountLabel.topAnchor, constant: -6),
+            registerButton.leadingAnchor.constraint(equalTo: createNewAccountLabel.trailingAnchor, constant: 5),
+            registerButton.widthAnchor.constraint(equalToConstant: 100),
+            registerButton.heightAnchor.constraint(equalToConstant: 30)
         ])
     }
 
