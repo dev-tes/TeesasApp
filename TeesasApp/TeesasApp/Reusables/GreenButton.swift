@@ -15,8 +15,7 @@ class GreenButton: UIButton {
        translatesAutoresizingMaskIntoConstraints = false
        clipsToBounds = true
        titleLabel?.font = UIFont.systemFont(ofSize: 17, weight: .medium)
-       layer.cornerRadius = 10
-       heightAnchor.constraint(equalToConstant: 55).isActive = true
+       layer.cornerRadius = 30
        layer.borderWidth = 1
         backgroundColor = .systemGreen
         layer.borderColor = UIColor.systemGreen.cgColor

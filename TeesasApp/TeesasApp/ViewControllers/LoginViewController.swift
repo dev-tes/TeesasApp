@@ -147,8 +147,8 @@ class LoginViewController: UIViewController {
         view.addSubview(passwordTextField)
         view.addSubview(checkBoxButton)
         view.addSubview(rememberMeLabel)
-//        view.addSubview(loginLabel)
-//        view.addSubview(loginLabel)
+        view.addSubview(forgotPasswordLabel)
+        view.addSubview(loginButton)
 //        view.addSubview(loginLabel)
 //        view.addSubview(loginLabel)
 //        view.addSubview(loginLabel)
@@ -177,7 +177,15 @@ class LoginViewController: UIViewController {
             checkBoxButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 20),
             
             rememberMeLabel.topAnchor.constraint(equalTo: checkBoxButton.topAnchor,constant: 2),
-            rememberMeLabel.leadingAnchor.constraint(equalTo: checkBoxButton.trailingAnchor, constant: 8)
+            rememberMeLabel.leadingAnchor.constraint(equalTo: checkBoxButton.trailingAnchor, constant: 8),
+            
+            forgotPasswordLabel.topAnchor.constraint(equalTo: rememberMeLabel.bottomAnchor, constant: 40),
+            forgotPasswordLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            loginButton.topAnchor.constraint(equalTo: forgotPasswordLabel.bottomAnchor, constant: 30),
+            loginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loginButton.heightAnchor.constraint(equalToConstant: 60),
+            loginButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.6)
             
         ])
     }
