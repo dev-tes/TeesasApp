@@ -24,7 +24,6 @@
 		04D5CEC227E9269F0067043F /* GreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5CEC127E9269F0067043F /* GreenButton.swift */; };
 		04D5CEC427E9288C0067043F /* GoogleAndFacebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5CEC327E9288C0067043F /* GoogleAndFacebook.swift */; };
 		04D5CEC627E9BD770067043F /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5CEC527E9BD770067043F /* StringExtension.swift */; };
-		04D5CED227EA30E40067043F /* CheckboxButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5CED127EA30E40067043F /* CheckboxButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +65,6 @@
 		04D5CEC127E9269F0067043F /* GreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenButton.swift; sourceTree = "<group>"; };
 		04D5CEC327E9288C0067043F /* GoogleAndFacebook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAndFacebook.swift; sourceTree = "<group>"; };
 		04D5CEC527E9BD770067043F /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
-		04D5CED127EA30E40067043F /* CheckboxButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,7 +186,6 @@
 				04D5CEB927E91B270067043F /* Dashboard */,
 				04050F9527E8E1CC00396D9D /* RegisterViewController.swift */,
 				04050FC127E8E79A00396D9D /* LoginViewController.swift */,
-				04D5CED127EA30E40067043F /* CheckboxButton.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -340,7 +337,6 @@
 				04D5CEB627E91A4C0067043F /* NotificationViewController.swift in Sources */,
 				04050F9627E8E1CC00396D9D /* RegisterViewController.swift in Sources */,
 				04D5CEBC27E91C9D0067043F /* UITextFieldExtension.swift in Sources */,
-				04D5CED227EA30E40067043F /* CheckboxButton.swift in Sources */,
 				04D5CEB427E91A3C0067043F /* BookmarkViewController.swift in Sources */,
 				04050F9227E8E1CC00396D9D /* AppDelegate.swift in Sources */,
 				04050F9427E8E1CC00396D9D /* SceneDelegate.swift in Sources */,

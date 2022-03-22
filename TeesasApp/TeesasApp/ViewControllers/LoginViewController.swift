@@ -13,7 +13,6 @@ class LoginViewController: UIViewController {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Login"
-//        label.font = UIFont.systemFont(ofSize: 15)
         label.font = UIFont.boldSystemFont(ofSize: 20)
         return label
     }()
