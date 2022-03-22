@@ -55,9 +55,12 @@ class LoginViewController: UIViewController {
     
     let checkBoxButton: UIButton = {
         let checkbox = UIButton.init(type: .custom)
-        checkbox.setImage(UIImage.init(named: "iconCheckboxOutlined"), for: .normal)
-        checkbox.setImage(UIImage.init(named: "iconCheckboxFilled"), for: .selected)
+        checkbox.setImage(UIImage.init(systemName: "checkmark.square"), for: .normal)
+        checkbox.setImage(UIImage.init(systemName: "square"), for: .selected)
+        checkbox.isSelected = true
         checkbox.addTarget(self, action: #selector(toggleCheckboxSelection), for: .touchUpInside)
+        checkbox.tintColor = .green
+        checkbox.translatesAutoresizingMaskIntoConstraints = false
         return checkbox
     }()
     
@@ -129,6 +132,7 @@ class LoginViewController: UIViewController {
         return button
     }()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -141,8 +145,8 @@ class LoginViewController: UIViewController {
         view.addSubview(footerLabel)
         view.addSubview(phoneNumberTextField)
         view.addSubview(passwordTextField)
-//        view.addSubview(loginLabel)
-//        view.addSubview(loginLabel)
+        view.addSubview(checkBoxButton)
+        view.addSubview(rememberMeLabel)
 //        view.addSubview(loginLabel)
 //        view.addSubview(loginLabel)
 //        view.addSubview(loginLabel)
@@ -168,6 +172,12 @@ class LoginViewController: UIViewController {
             passwordTextField.leadingAnchor.constraint(equalTo: footerLabel.leadingAnchor),
             passwordTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             passwordTextField.heightAnchor.constraint(equalToConstant: 50),
+            
+            checkBoxButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 30),
+            checkBoxButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 20),
+            
+            rememberMeLabel.topAnchor.constraint(equalTo: checkBoxButton.topAnchor,constant: 2),
+            rememberMeLabel.leadingAnchor.constraint(equalTo: checkBoxButton.trailingAnchor, constant: 8)
             
         ])
     }
