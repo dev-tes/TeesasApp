@@ -109,6 +109,44 @@ class RegisterViewController: UIViewController {
         return textField
     }()
     
+    let mRadioButton: UIButton = {
+        let checkbox = UIButton.init(type: .custom)
+        checkbox.setImage(UIImage.init(systemName: "checkmark.square"), for: .normal)
+        checkbox.setImage(UIImage.init(systemName: "square"), for: .selected)
+        checkbox.isSelected = true
+        checkbox.addTarget(self, action: #selector(toggleCheckboxSelection), for: .touchUpInside)
+        checkbox.tintColor = .green
+        checkbox.translatesAutoresizingMaskIntoConstraints = false
+        return checkbox
+    }()
+    
+    let maleLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Great to see you again!"
+        label.font = UIFont.systemFont(ofSize: 15)
+        return label
+    }()
+    
+    let fRadioButton: UIButton = {
+        let checkbox = UIButton.init(type: .custom)
+        checkbox.setImage(UIImage.init(systemName: "checkmark.square"), for: .normal)
+        checkbox.setImage(UIImage.init(systemName: "square"), for: .selected)
+        checkbox.isSelected = true
+        checkbox.addTarget(self, action: #selector(toggleCheckboxSelection), for: .touchUpInside)
+        checkbox.tintColor = .green
+        checkbox.translatesAutoresizingMaskIntoConstraints = false
+        return checkbox
+    }()
+    
+    let femaleLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Great to see you again!"
+        label.font = UIFont.systemFont(ofSize: 15)
+        return label
+    }()
+    
     var registerButton: GreenButton = {
         let button = GreenButton()
         button.setTitle("Register", for: .normal)
@@ -142,7 +180,7 @@ class RegisterViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .green
+        view.backgroundColor = .systemBackground
     }
     
     @objc func backButtonPressed() {
@@ -154,6 +192,18 @@ class RegisterViewController: UIViewController {
     
     @objc func didTapRegisterButton() {
         navigationController?.pushViewController(MainTabBarViewController(), animated: true)
+    }
+    
+    @objc func toggleCheckboxSelection() {
+        mRadioButton.isSelected = !mRadioButton.isSelected
+        
+        if mRadioButton.isSelected == true {
+            fRadioButton.isSelected = false
+        }
+        
+        if fRadioButton.isSelected == true {
+            mRadioButton.isSelected = false
+        }
     }
 }
 
