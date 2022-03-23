@@ -63,23 +63,26 @@ class HomeViewController: UIViewController {
         view.layer.cornerRadius = 12
         return view
     }()
+    
     let biniView: UIView = {
         let view = UIView()
-        view.backgroundColor = .green
+        view.backgroundColor = .orange
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 12
         return view
     }()
+    
     let ijawView: UIView = {
         let view = UIView()
-        view.backgroundColor = .green
+        view.backgroundColor = .red
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 12
         return view
     }()
+    
     let viewAllView: UIView = {
         let view = UIView()
-        view.backgroundColor = .green
+        view.backgroundColor = .red
         view.translatesAutoresizingMaskIntoConstraints = false
         view.layer.cornerRadius = 12
         return view
@@ -101,9 +104,9 @@ class HomeViewController: UIViewController {
         scrollView.addSubview(contentView)
         contentView.addSubview(profileView)
         contentView.addSubview(ibibioView)
-//        contentView.addSubview(phoneNumberTextField)
-//        contentView.addSubview(emailTextField)
-//        contentView.addSubview(passwordTextField)
+        contentView.addSubview(biniView)
+        contentView.addSubview(ijawView)
+        contentView.addSubview(viewAllView)
 //        contentView.addSubview(cityTextField)
 //        contentView.addSubview(dateOfBirthTextField)
 //        contentView.addSubview(mRadioButton)
@@ -151,6 +154,21 @@ class HomeViewController: UIViewController {
             ibibioView.trailingAnchor.constraint(equalTo: contentView.centerXAnchor, constant: -10),
             ibibioView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             ibibioView.heightAnchor.constraint(equalToConstant: 120),
+            
+            biniView.topAnchor.constraint(equalTo: profileView.bottomAnchor, constant: 8),
+            biniView.leadingAnchor.constraint(equalTo: contentView.centerXAnchor, constant: 10),
+            biniView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            biniView.heightAnchor.constraint(equalToConstant: 120),
+            
+            ijawView.topAnchor.constraint(equalTo: ibibioView.bottomAnchor, constant: 20),
+            ijawView.trailingAnchor.constraint(equalTo: contentView.centerXAnchor, constant: -10),
+            ijawView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            ijawView.heightAnchor.constraint(equalToConstant: 120),
+            
+            viewAllView.topAnchor.constraint(equalTo: biniView.bottomAnchor, constant: 20),
+            viewAllView.leadingAnchor.constraint(equalTo: contentView.centerXAnchor, constant: 10),
+            viewAllView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            viewAllView.heightAnchor.constraint(equalToConstant: 120),
         ])
     }
     
