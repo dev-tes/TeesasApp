@@ -55,6 +55,14 @@ class HomeViewController: UIViewController {
         return view
     }()
     
+    let profileImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(systemName: "map.circle.fill")
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
     let ibibioView: UIView = {
         let view = UIView()
         view.backgroundColor = .orange
@@ -105,6 +113,23 @@ class HomeViewController: UIViewController {
         view.layer.borderWidth = 1
         view.layer.borderColor = UIColor.black.cgColor
         return view
+    }()
+    
+    let ebookLabel: UILabel = {
+        let label = UILabel()
+        label.text = "E-Book"
+        label.font = UIFont.boldSystemFont(ofSize: 15)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    let ebookSubtitleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Deepen your knowledge! Gain access to \nexciting books and learning materials."
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 3
+        return label
     }()
     
     let chartImageView: UIImageView = {
@@ -183,7 +208,7 @@ class HomeViewController: UIViewController {
         return label
     }()
     
-    let picksImageView: UIImageView = {
+    let picksImageView1: UIImageView = {
         let imageView = UIImageView()
         imageView.image = UIImage(systemName: "map.circle.fill")
         imageView.contentMode = .scaleAspectFit
@@ -223,13 +248,15 @@ class HomeViewController: UIViewController {
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
         contentView.addSubview(profileView)
-        profileView.addSubview(picksImageView)
+        profileView.addSubview(profileImageView)
         contentView.addSubview(ibibioView)
         contentView.addSubview(biniView)
         contentView.addSubview(ijawView)
         contentView.addSubview(viewAllView)
         contentView.addSubview(geniusView)
         contentView.addSubview(ebookView)
+        ebookView.addSubview(ebookLabel)
+        ebookView.addSubview(ebookSubtitleLabel)
         contentView.addSubview(chartImageView)
         contentView.addSubview(performanceLabel)
         contentView.addSubview(picksLabel)
@@ -270,10 +297,10 @@ class HomeViewController: UIViewController {
             profileView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
             profileView.heightAnchor.constraint(equalToConstant: 130),
             
-            picksImageView.centerYAnchor.constraint(equalTo: profileView.centerYAnchor),
-            picksImageView.leadingAnchor.constraint(equalTo: profileView.leadingAnchor, constant: 10),
-            picksImageView.widthAnchor.constraint(equalToConstant: 80),
-            picksImageView.heightAnchor.constraint(equalToConstant: 100),
+            profileImageView.centerYAnchor.constraint(equalTo: profileView.centerYAnchor),
+            profileImageView.leadingAnchor.constraint(equalTo: profileView.leadingAnchor, constant: 10),
+            profileImageView.widthAnchor.constraint(equalToConstant: 80),
+            profileImageView.heightAnchor.constraint(equalToConstant: 100),
             
             ibibioView.topAnchor.constraint(equalTo: profileView.bottomAnchor, constant: 8),
             ibibioView.trailingAnchor.constraint(equalTo: contentView.centerXAnchor, constant: -10),
@@ -304,6 +331,12 @@ class HomeViewController: UIViewController {
             ebookView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             ebookView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
             ebookView.heightAnchor.constraint(equalToConstant: 100),
+            
+            ebookLabel.topAnchor.constraint(equalTo: ebookView.topAnchor, constant: 20),
+            ebookLabel.leadingAnchor.constraint(equalTo: ebookView.leadingAnchor, constant: 50),
+            
+            ebookSubtitleLabel.topAnchor.constraint(equalTo: ebookLabel.bottomAnchor, constant: 10),
+            ebookSubtitleLabel.leadingAnchor.constraint(equalTo: ebookView.leadingAnchor, constant: 50),
             
             chartImageView.topAnchor.constraint(equalTo: ebookView.bottomAnchor, constant: 30),
             chartImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
