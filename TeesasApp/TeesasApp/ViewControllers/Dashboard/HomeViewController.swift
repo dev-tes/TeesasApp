@@ -88,6 +88,52 @@ class HomeViewController: UIViewController {
         return view
     }()
     
+    let geniusView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemBackground
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.cornerRadius = 12
+        view.layer.borderWidth = 1
+        view.layer.borderColor = UIColor.black.cgColor
+        return view
+    }()
+    
+    let ebookView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemBackground
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.cornerRadius = 12
+        view.layer.borderWidth = 1
+        view.layer.borderColor = UIColor.black.cgColor
+        return view
+    }()
+    
+    let chartImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(systemName: "chart.line.uptrend.xyaxis.circle.fill")
+        imageView.tintColor = .green
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
+    let performanceLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Performance Reports"
+        label.font = UIFont.boldSystemFont(ofSize: 15)
+        return label
+    }()
+    
+    let picksLabel: UILabel = {
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Teesas Learning Picks for Tes"
+        label.font = UIFont.systemFont(ofSize: 15)
+        return label
+    }()
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -107,11 +153,11 @@ class HomeViewController: UIViewController {
         contentView.addSubview(biniView)
         contentView.addSubview(ijawView)
         contentView.addSubview(viewAllView)
-//        contentView.addSubview(cityTextField)
-//        contentView.addSubview(dateOfBirthTextField)
-//        contentView.addSubview(mRadioButton)
-//        contentView.addSubview(maleLabel)
-//        contentView.addSubview(fRadioButton)
+        contentView.addSubview(geniusView)
+        contentView.addSubview(ebookView)
+        contentView.addSubview(chartImageView)
+        contentView.addSubview(performanceLabel)
+        contentView.addSubview(picksLabel)
 //        contentView.addSubview(femaleLabel)
 //        contentView.addSubview(registerButton)
 //        contentView.addSubview(stackView)
@@ -169,6 +215,27 @@ class HomeViewController: UIViewController {
             viewAllView.leadingAnchor.constraint(equalTo: contentView.centerXAnchor, constant: 10),
             viewAllView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
             viewAllView.heightAnchor.constraint(equalToConstant: 120),
+            
+            geniusView.topAnchor.constraint(equalTo: viewAllView.bottomAnchor, constant: 20),
+            geniusView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+            geniusView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
+            geniusView.heightAnchor.constraint(equalToConstant: 170),
+            
+            ebookView.topAnchor.constraint(equalTo: geniusView.bottomAnchor, constant: 20),
+            ebookView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            ebookView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            ebookView.heightAnchor.constraint(equalToConstant: 100),
+            
+            chartImageView.topAnchor.constraint(equalTo: ebookView.bottomAnchor, constant: 30),
+            chartImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            chartImageView.heightAnchor.constraint(equalToConstant: 40),
+            chartImageView.widthAnchor.constraint(equalToConstant: 40),
+            
+            performanceLabel.topAnchor.constraint(equalTo: chartImageView.topAnchor, constant: 10),
+            performanceLabel.leadingAnchor.constraint(equalTo: chartImageView.trailingAnchor, constant: 10),
+            
+            picksLabel.topAnchor.constraint(equalTo: chartImageView.bottomAnchor, constant: 30),
+            picksLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
         ])
     }
     
