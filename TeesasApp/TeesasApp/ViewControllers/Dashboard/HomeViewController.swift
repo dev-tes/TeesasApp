@@ -56,6 +56,35 @@ class HomeViewController: UIViewController {
         return view
     }()
     
+    let ibibioView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .orange
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.cornerRadius = 12
+        return view
+    }()
+    let biniView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .green
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.cornerRadius = 12
+        return view
+    }()
+    let ijawView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .green
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.cornerRadius = 12
+        return view
+    }()
+    let viewAllView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .green
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.cornerRadius = 12
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -71,7 +100,7 @@ class HomeViewController: UIViewController {
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
         contentView.addSubview(profileView)
-//        contentView.addSubview(nameTextField)
+        contentView.addSubview(ibibioView)
 //        contentView.addSubview(phoneNumberTextField)
 //        contentView.addSubview(emailTextField)
 //        contentView.addSubview(passwordTextField)
@@ -117,6 +146,11 @@ class HomeViewController: UIViewController {
             profileView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
             profileView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
             profileView.heightAnchor.constraint(equalToConstant: 130),
+            
+            ibibioView.topAnchor.constraint(equalTo: profileView.bottomAnchor, constant: 8),
+            ibibioView.trailingAnchor.constraint(equalTo: contentView.centerXAnchor, constant: -10),
+            ibibioView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            ibibioView.heightAnchor.constraint(equalToConstant: 120),
         ])
     }
     
