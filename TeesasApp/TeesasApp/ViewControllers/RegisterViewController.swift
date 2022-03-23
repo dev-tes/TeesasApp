@@ -137,7 +137,7 @@ class RegisterViewController: UIViewController {
     let maleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Great to see you again!"
+        label.text = "male"
         label.font = UIFont.systemFont(ofSize: 15)
         return label
     }()
@@ -201,24 +201,24 @@ class RegisterViewController: UIViewController {
     
     func constraintViews() {
         view.addSubview(backButton)
-                view.addSubview(registerLabel)
+        view.addSubview(registerLabel)
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
         contentView.addSubview(footnoteLabel)
-//        contentView.addSubview(footnoteLabel)
-//        contentView.addSubview(footnoteLabel)
-//        contentView.addSubview(footnoteLabel)
-//        contentView.addSubview(footnoteLabel)
-//        contentView.addSubview(footnoteLabel)
-//        contentView.addSubview(footnoteLabel)
-//        contentView.addSubview(footnoteLabel)
-//        contentView.addSubview(footnoteLabel)
-//        contentView.addSubview(footnoteLabel)
-//        contentView.addSubview(footnoteLabel)
-//        contentView.addSubview(footnoteLabel)
-//        contentView.addSubview(footnoteLabel)
-//        contentView.addSubview(footnoteLabel)
-//        contentView.addSubview(footnoteLabel)
+        contentView.addSubview(nameTextField)
+        contentView.addSubview(phoneNumberTextField)
+        contentView.addSubview(emailTextField)
+        contentView.addSubview(passwordTextField)
+        contentView.addSubview(cityTextField)
+        contentView.addSubview(dateOfBirthTextField)
+                contentView.addSubview(mRadioButton)
+                contentView.addSubview(maleLabel)
+        //        contentView.addSubview(footnoteLabel)
+        //        contentView.addSubview(footnoteLabel)
+        //        contentView.addSubview(footnoteLabel)
+        //        contentView.addSubview(footnoteLabel)
+        //        contentView.addSubview(footnoteLabel)
+        //        contentView.addSubview(footnoteLabel)
         NSLayoutConstraint.activate([
             backButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
             backButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
@@ -237,9 +237,54 @@ class RegisterViewController: UIViewController {
             contentView.heightAnchor.constraint(equalToConstant: 1300),
             
             footnoteLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5),
-            footnoteLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20)
+            footnoteLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            
+            nameTextField.topAnchor.constraint(equalTo: footnoteLabel.bottomAnchor, constant: 20),
+            nameTextField.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            nameTextField.heightAnchor.constraint(equalToConstant: 50),
+            nameTextField.leadingAnchor.constraint(equalTo: footnoteLabel.leadingAnchor),
+            nameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            
+            phoneNumberTextField.topAnchor.constraint(equalTo: nameTextField.bottomAnchor, constant: 20),
+            phoneNumberTextField.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            phoneNumberTextField.heightAnchor.constraint(equalToConstant: 50),
+            phoneNumberTextField.leadingAnchor.constraint(equalTo: footnoteLabel.leadingAnchor),
+            phoneNumberTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            
+            emailTextField.topAnchor.constraint(equalTo: phoneNumberTextField.bottomAnchor, constant: 20),
+            emailTextField.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            emailTextField.heightAnchor.constraint(equalToConstant: 50),
+            emailTextField.leadingAnchor.constraint(equalTo: footnoteLabel.leadingAnchor),
+            emailTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            
+            passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 20),
+            passwordTextField.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            passwordTextField.heightAnchor.constraint(equalToConstant: 50),
+            passwordTextField.leadingAnchor.constraint(equalTo: footnoteLabel.leadingAnchor),
+            passwordTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            
+            cityTextField.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 20),
+            cityTextField.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            cityTextField.heightAnchor.constraint(equalToConstant: 50),
+            cityTextField.leadingAnchor.constraint(equalTo: footnoteLabel.leadingAnchor),
+            cityTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            
+            dateOfBirthTextField.topAnchor.constraint(equalTo: cityTextField.bottomAnchor, constant: 20),
+            dateOfBirthTextField.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            dateOfBirthTextField.heightAnchor.constraint(equalToConstant: 50),
+            dateOfBirthTextField.leadingAnchor.constraint(equalTo: footnoteLabel.leadingAnchor),
+            dateOfBirthTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
+            
+            mRadioButton.topAnchor.constraint(equalTo: dateOfBirthTextField.bottomAnchor, constant: 20),
+            mRadioButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            
+            maleLabel.topAnchor.constraint(equalTo: mRadioButton.topAnchor, constant: 0),
+            maleLabel.leadingAnchor.constraint(equalTo: mRadioButton.trailingAnchor, constant: 20),
+            
         ])
     }
+    
+    
     
     
     @objc func backButtonPressed() {
