@@ -24,6 +24,7 @@
 		04D5CEC227E9269F0067043F /* GreenButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5CEC127E9269F0067043F /* GreenButton.swift */; };
 		04D5CEC427E9288C0067043F /* GoogleAndFacebook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5CEC327E9288C0067043F /* GoogleAndFacebook.swift */; };
 		04D5CEC627E9BD770067043F /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5CEC527E9BD770067043F /* StringExtension.swift */; };
+		04D5CED427EB49B00067043F /* PicksCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5CED327EB49B00067043F /* PicksCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,7 @@
 		04D5CEC127E9269F0067043F /* GreenButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GreenButton.swift; sourceTree = "<group>"; };
 		04D5CEC327E9288C0067043F /* GoogleAndFacebook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAndFacebook.swift; sourceTree = "<group>"; };
 		04D5CEC527E9BD770067043F /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		04D5CED327EB49B00067043F /* PicksCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicksCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				04D5CEB327E91A3C0067043F /* BookmarkViewController.swift */,
 				04D5CEB527E91A4C0067043F /* NotificationViewController.swift */,
 				04D5CEB727E91A570067043F /* MoreViewController.swift */,
+				04D5CED327EB49B00067043F /* PicksCollectionViewCell.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04D5CEC427E9288C0067043F /* GoogleAndFacebook.swift in Sources */,
+				04D5CED427EB49B00067043F /* PicksCollectionViewCell.swift in Sources */,
 				04D5CEB827E91A570067043F /* MoreViewController.swift in Sources */,
 				04D5CEB027E919EF0067043F /* MainTabBarViewController.swift in Sources */,
 				04D5CEC227E9269F0067043F /* GreenButton.swift in Sources */,

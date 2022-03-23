@@ -135,17 +135,38 @@ class HomeViewController: UIViewController {
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .vertical
-        layout.minimumLineSpacing = 40
+        layout.scrollDirection = .horizontal
+        layout.minimumLineSpacing = 30
         let collView = UICollectionView(frame: .zero, collectionViewLayout: layout)
-        collView.backgroundColor = .red
+        collView.backgroundColor = .systemBackground
         collView.dataSource = self
         collView.delegate = self
         collView.showsVerticalScrollIndicator = false
         collView.translatesAutoresizingMaskIntoConstraints = false
-        collView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collView.register(PicksCollectionViewCell.self, forCellWithReuseIdentifier: PicksCollectionViewCell().identifier)
         return collView
     }()
+    
+    let placeView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemBackground
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.cornerRadius = 12
+        view.layer.borderWidth = 1
+        view.layer.borderColor = UIColor.black.cgColor
+        return view
+    }()
+    
+    let shareView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .systemBackground
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.cornerRadius = 12
+        view.layer.borderWidth = 1
+        view.layer.borderColor = UIColor.black.cgColor
+        return view
+    }()
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -172,12 +193,8 @@ class HomeViewController: UIViewController {
         contentView.addSubview(performanceLabel)
         contentView.addSubview(picksLabel)
         contentView.addSubview(collectionView)
-        //        contentView.addSubview(registerButton)
-        //        contentView.addSubview(stackView)
-        //
-        //        stackView.addArrangedSubview(privacyLabel)
-        //        stackView.addArrangedSubview(andLabel)
-        //        stackView.addArrangedSubview(tAndCLabel)
+        contentView.addSubview(placeView)
+        contentView.addSubview(shareView)
         //        contentView.addSubview(footnoteLabel)
         NSLayoutConstraint.activate([
             logoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
@@ -254,19 +271,35 @@ class HomeViewController: UIViewController {
             collectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             collectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
             collectionView.heightAnchor.constraint(equalToConstant: 150),
+            
+            placeView.topAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 20),
+            placeView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            placeView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            placeView.heightAnchor.constraint(equalToConstant: 100),
+            
+            shareView.topAnchor.constraint(equalTo: placeView.bottomAnchor, constant: 20),
+            shareView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            shareView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            shareView.heightAnchor.constraint(equalToConstant: 100),
+
         ])
     }
 }
 
 extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 180, height: 140)
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         7
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PicksCollectionViewCell().identifier, for: indexPath) as? PicksCollectionViewCell else {return UICollectionViewCell() }
         cell.backgroundColor = .blue
-//        cell.
+        cell.layer.cornerRadius = 20
+        cell.layer.masksToBounds = true
         return cell
     }
     
