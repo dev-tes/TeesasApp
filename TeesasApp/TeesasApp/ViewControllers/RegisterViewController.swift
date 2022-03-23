@@ -311,7 +311,63 @@ class RegisterViewController: UIViewController {
     }
     
     
+    func validateFields() -> Bool {
+        let name = nameTextField.text
+        let phone = phoneNumberTextField.text
+        let email = emailTextField.text
+        let password = passwordTextField.text
+        
+        guard let name = name, let phone = phone, let email = email, let password = password else { return true}
+        if name.isEmpty || phone.isEmpty || email.isEmpty || password.isEmpty {
+            print("name is nil")
+            let myAlert = UIAlertController(title: "Error", message: "needed credentials not complete", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "ok", style: .cancel, handler: nil)
+            
+            myAlert.addAction(okAction)
+            self.present(myAlert, animated: true, completion: nil)
+            
+            return false
+            
+        } else {
+            return true
+        }
+    }
     
+    func getResponse(completion:((APIResponse) -> Void)){
+        let url = URL(string: "https://run.mocky.io/v3/1a2eae07-997f-4edc-a756-563e3e4536e4")!
+        
+        //        var request = URLRequest(url: url)
+        //
+        //        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            if let data = data {
+                if let status = try? JSONDecoder().decode(APIResponse.self, from: data) {
+                    print(status)
+                } else {
+                    print("Invalid Response")
+                }
+            } else if let error = error {
+                print("HTTP Request Failed \(error)")
+            }
+        }
+        task.resume()
+    }
+    
+    func load(completionHandler: ((APIResponse) -> Void)?) {         //loading data from parser using closures
+        if let fileLocation = Bundle.main.url(forResource: "Json", withExtension: "json") {
+            // do catch in case of an error
+            do {
+                let data = try Data(contentsOf: fileLocation)
+                let jsonDecoder = JSONDecoder()
+                let dataFromJson = try jsonDecoder.decode(APIResponse.self, from: data)
+
+                completionHandler?(dataFromJson)
+            } catch {
+                print("\(error)")
+            }
+        }
+    }
     
     @objc func backButtonPressed() {
         navigationController?.popViewController(animated: true)
@@ -321,7 +377,23 @@ class RegisterViewController: UIViewController {
     }
     
     @objc func didTapRegisterButton() {
-        navigationController?.pushViewController(MainTabBarViewController(), animated: true)
+        if validateFields() == true {
+//            getResponse { APIResponse in
+//                print(APIResponse.status)
+//                if APIResponse.status == true {
+//                    self.navigationController?.pushViewController(MainTabBarViewController(), animated: true)
+//                }
+//            }
+            
+            
+            load { APIResponse in
+                print(APIResponse.status)
+                if APIResponse.status == true {
+                    self.navigationController?.pushViewController(MainTabBarViewController(), animated: true)
+                }
+            }
+        }
+        
     }
     
     @objc func toggleCheckboxSelection() {

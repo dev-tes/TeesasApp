@@ -223,6 +223,7 @@ class HomeViewController: UIViewController {
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
         contentView.addSubview(profileView)
+        profileView.addSubview(picksImageView)
         contentView.addSubview(ibibioView)
         contentView.addSubview(biniView)
         contentView.addSubview(ijawView)
@@ -268,6 +269,11 @@ class HomeViewController: UIViewController {
             profileView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
             profileView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
             profileView.heightAnchor.constraint(equalToConstant: 130),
+            
+            picksImageView.centerYAnchor.constraint(equalTo: profileView.centerYAnchor),
+            picksImageView.leadingAnchor.constraint(equalTo: profileView.leadingAnchor, constant: 10),
+            picksImageView.widthAnchor.constraint(equalToConstant: 80),
+            picksImageView.heightAnchor.constraint(equalToConstant: 100),
             
             ibibioView.topAnchor.constraint(equalTo: profileView.bottomAnchor, constant: 8),
             ibibioView.trailingAnchor.constraint(equalTo: contentView.centerXAnchor, constant: -10),
