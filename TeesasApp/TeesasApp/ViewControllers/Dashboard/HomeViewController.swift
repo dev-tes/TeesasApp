@@ -132,7 +132,20 @@ class HomeViewController: UIViewController {
         label.font = UIFont.systemFont(ofSize: 15)
         return label
     }()
-
+    
+    lazy var collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .vertical
+        layout.minimumLineSpacing = 40
+        let collView = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        collView.backgroundColor = .red
+        collView.dataSource = self
+        collView.delegate = self
+        collView.showsVerticalScrollIndicator = false
+        collView.translatesAutoresizingMaskIntoConstraints = false
+        collView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        return collView
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -158,13 +171,13 @@ class HomeViewController: UIViewController {
         contentView.addSubview(chartImageView)
         contentView.addSubview(performanceLabel)
         contentView.addSubview(picksLabel)
-//        contentView.addSubview(femaleLabel)
-//        contentView.addSubview(registerButton)
-//        contentView.addSubview(stackView)
-//
-//        stackView.addArrangedSubview(privacyLabel)
-//        stackView.addArrangedSubview(andLabel)
-//        stackView.addArrangedSubview(tAndCLabel)
+        contentView.addSubview(collectionView)
+        //        contentView.addSubview(registerButton)
+        //        contentView.addSubview(stackView)
+        //
+        //        stackView.addArrangedSubview(privacyLabel)
+        //        stackView.addArrangedSubview(andLabel)
+        //        stackView.addArrangedSubview(tAndCLabel)
         //        contentView.addSubview(footnoteLabel)
         NSLayoutConstraint.activate([
             logoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
@@ -236,7 +249,25 @@ class HomeViewController: UIViewController {
             
             picksLabel.topAnchor.constraint(equalTo: chartImageView.bottomAnchor, constant: 30),
             picksLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 15),
+            
+            collectionView.topAnchor.constraint(equalTo: picksLabel.bottomAnchor, constant: 20),
+            collectionView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
+            collectionView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
+            collectionView.heightAnchor.constraint(equalToConstant: 150),
         ])
+    }
+}
+
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        7
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
+        cell.backgroundColor = .blue
+//        cell.
+        return cell
     }
     
     
