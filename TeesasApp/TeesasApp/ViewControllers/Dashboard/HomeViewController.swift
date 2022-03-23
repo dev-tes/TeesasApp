@@ -47,7 +47,6 @@ class HomeViewController: UIViewController {
         return container
     }()
     
-    
     let profileView: UIView = {
         let view = UIView()
         view.backgroundColor = .green
@@ -167,6 +166,47 @@ class HomeViewController: UIViewController {
         return view
     }()
     
+    let teesasLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Teesas Place"
+        label.font = UIFont.boldSystemFont(ofSize: 15)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    let teesasSubtitleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Know more about how we are making \nan impact on the future of learning."
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 3
+        return label
+    }()
+    
+    let picksImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(systemName: "map.circle.fill")
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+    
+    let shareLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Share with friends"
+        label.font = UIFont.boldSystemFont(ofSize: 15)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    let shareSubtitleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Bring your friend along on this exciting \nlearning experience with Teesas!"
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 3
+        return label
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -195,7 +235,10 @@ class HomeViewController: UIViewController {
         contentView.addSubview(collectionView)
         contentView.addSubview(placeView)
         contentView.addSubview(shareView)
-        //        contentView.addSubview(footnoteLabel)
+        placeView.addSubview(teesasLabel)
+        placeView.addSubview(teesasSubtitleLabel)
+        shareView.addSubview(shareLabel)
+        shareView.addSubview(shareSubtitleLabel)
         NSLayoutConstraint.activate([
             logoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
             logoImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
@@ -281,7 +324,18 @@ class HomeViewController: UIViewController {
             shareView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
             shareView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -20),
             shareView.heightAnchor.constraint(equalToConstant: 100),
-
+            
+            teesasLabel.topAnchor.constraint(equalTo: placeView.topAnchor, constant: 20),
+            teesasLabel.leadingAnchor.constraint(equalTo: placeView.leadingAnchor, constant: 50),
+            
+            teesasSubtitleLabel.topAnchor.constraint(equalTo: teesasLabel.bottomAnchor, constant: 10),
+            teesasSubtitleLabel.leadingAnchor.constraint(equalTo: placeView.leadingAnchor, constant: 50),
+            
+            shareLabel.topAnchor.constraint(equalTo: shareView.topAnchor, constant: 20),
+            shareLabel.leadingAnchor.constraint(equalTo: shareView.leadingAnchor, constant: 50),
+            
+            shareSubtitleLabel.topAnchor.constraint(equalTo: shareLabel.bottomAnchor, constant: 10),
+            shareSubtitleLabel.leadingAnchor.constraint(equalTo: shareView.leadingAnchor, constant: 50),
         ])
     }
 }
@@ -297,7 +351,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: PicksCollectionViewCell().identifier, for: indexPath) as? PicksCollectionViewCell else {return UICollectionViewCell() }
-        cell.backgroundColor = .blue
+        cell.backgroundColor = .green
         cell.layer.cornerRadius = 20
         cell.layer.masksToBounds = true
         return cell
