@@ -246,7 +246,6 @@ class RegisterViewController: UIViewController {
             contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
             contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
             contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-            //            contentView.heightAnchor.constraint(equalToConstant: 1300),
             
             footnoteLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5),
             footnoteLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),

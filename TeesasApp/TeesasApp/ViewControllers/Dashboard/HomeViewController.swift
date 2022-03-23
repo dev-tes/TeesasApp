@@ -28,7 +28,7 @@ class HomeViewController: UIViewController {
     let enquireLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "and"
+        label.text = "Enquire Now"
         label.font = UIFont.systemFont(ofSize: 15)
         return label
     }()
@@ -48,10 +48,11 @@ class HomeViewController: UIViewController {
     }()
     
     
-    let budgetsDropdownParentView: UIView = {
+    let profileView: UIView = {
         let view = UIView()
         view.backgroundColor = .green
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.layer.cornerRadius = 12
         return view
     }()
     
@@ -66,10 +67,10 @@ class HomeViewController: UIViewController {
     func constraintViews() {
         view.addSubview(logoImageView)
         view.addSubview(whatsappImageView)
-//        view.addSubview(enquireLabel)
-//        view.addSubview(scrollView)
-//        scrollView.addSubview(contentView)
-//        contentView.addSubview(footnoteLabel)
+        view.addSubview(enquireLabel)
+        view.addSubview(scrollView)
+        scrollView.addSubview(contentView)
+        contentView.addSubview(profileView)
 //        contentView.addSubview(nameTextField)
 //        contentView.addSubview(phoneNumberTextField)
 //        contentView.addSubview(emailTextField)
@@ -93,10 +94,29 @@ class HomeViewController: UIViewController {
             logoImageView.heightAnchor.constraint(equalToConstant: 40),
             logoImageView.widthAnchor.constraint(equalToConstant: 100),
             
-            logoImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
-            logoImageView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            logoImageView.heightAnchor.constraint(equalToConstant: 40),
-            logoImageView.widthAnchor.constraint(equalToConstant: 100),
+            whatsappImageView.topAnchor.constraint(equalTo: logoImageView.topAnchor),
+            whatsappImageView.trailingAnchor.constraint(equalTo: enquireLabel.leadingAnchor, constant: -10),
+            whatsappImageView.heightAnchor.constraint(equalToConstant: 40),
+            whatsappImageView.widthAnchor.constraint(equalToConstant: 40),
+            
+            enquireLabel.topAnchor.constraint(equalTo: logoImageView.topAnchor, constant: 10),
+            enquireLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15),
+            
+            scrollView.widthAnchor.constraint(equalTo: view.widthAnchor),
+            scrollView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            scrollView.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 5),
+            scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            
+            contentView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor),
+            contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
+            contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
+            contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
+            contentView.heightAnchor.constraint(equalToConstant: 1300),
+            
+            profileView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 20),
+            profileView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
+            profileView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
+            profileView.heightAnchor.constraint(equalToConstant: 130),
         ])
     }
     
