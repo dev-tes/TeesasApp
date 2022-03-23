@@ -169,13 +169,13 @@ class RegisterViewController: UIViewController {
     }()
     
     let stackView: UIStackView = {
-      let stacks = UIStackView()
-      stacks.axis = NSLayoutConstraint.Axis.horizontal
-      stacks.distribution = UIStackView.Distribution.equalSpacing
-      stacks.alignment = UIStackView.Alignment.center
-      stacks.spacing = 8.0
-      stacks.translatesAutoresizingMaskIntoConstraints = false
-      return stacks
+        let stacks = UIStackView()
+        stacks.axis = NSLayoutConstraint.Axis.horizontal
+        stacks.distribution = UIStackView.Distribution.equalSpacing
+        stacks.alignment = UIStackView.Alignment.center
+        stacks.spacing = 8.0
+        stacks.translatesAutoresizingMaskIntoConstraints = false
+        return stacks
     }()
     
     let privacyLabel: UILabel = {
@@ -221,17 +221,16 @@ class RegisterViewController: UIViewController {
         contentView.addSubview(passwordTextField)
         contentView.addSubview(cityTextField)
         contentView.addSubview(dateOfBirthTextField)
-                contentView.addSubview(mRadioButton)
-                contentView.addSubview(maleLabel)
-                contentView.addSubview(fRadioButton)
-                contentView.addSubview(femaleLabel)
-                contentView.addSubview(registerButton)
-                contentView.addSubview(stackView)
+        contentView.addSubview(mRadioButton)
+        contentView.addSubview(maleLabel)
+        contentView.addSubview(fRadioButton)
+        contentView.addSubview(femaleLabel)
+        contentView.addSubview(registerButton)
+        contentView.addSubview(stackView)
         
         stackView.addArrangedSubview(privacyLabel)
         stackView.addArrangedSubview(andLabel)
         stackView.addArrangedSubview(tAndCLabel)
-        //        contentView.addSubview(footnoteLabel)
         NSLayoutConstraint.activate([
             backButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
             backButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
@@ -247,7 +246,7 @@ class RegisterViewController: UIViewController {
             contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
             contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
             contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-//            contentView.heightAnchor.constraint(equalToConstant: 1300),
+            //            contentView.heightAnchor.constraint(equalToConstant: 1300),
             
             footnoteLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5),
             footnoteLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
