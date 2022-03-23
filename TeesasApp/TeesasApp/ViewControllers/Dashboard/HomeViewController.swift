@@ -105,6 +105,30 @@ class HomeViewController: UIViewController {
         return view
     }()
     
+    let geniusLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Share with friends"
+        label.font = UIFont.boldSystemFont(ofSize: 15)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    let geniusSubtitleLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Bring your friend along on this exciting \nlearning experience with Teesas!"
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 3
+        return label
+    }()
+    
+    var geniusButton: GreenButton = {
+        let button = GreenButton()
+        button.setTitle("Buy Now", for: .normal)
+        button.layer.cornerRadius = 10
+        return button
+    }()
+    
     let ebookView: UIView = {
         let view = UIView()
         view.backgroundColor = .systemBackground
@@ -254,6 +278,9 @@ class HomeViewController: UIViewController {
         contentView.addSubview(ijawView)
         contentView.addSubview(viewAllView)
         contentView.addSubview(geniusView)
+        geniusView.addSubview(geniusLabel)
+        geniusView.addSubview(geniusSubtitleLabel)
+        geniusView.addSubview(geniusButton)
         contentView.addSubview(ebookView)
         ebookView.addSubview(ebookLabel)
         ebookView.addSubview(ebookSubtitleLabel)
@@ -326,6 +353,17 @@ class HomeViewController: UIViewController {
             geniusView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 10),
             geniusView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10),
             geniusView.heightAnchor.constraint(equalToConstant: 170),
+            
+            geniusLabel.topAnchor.constraint(equalTo: geniusView.topAnchor, constant: 40),
+            geniusLabel.leadingAnchor.constraint(equalTo: geniusView.leadingAnchor, constant: 50),
+            
+            geniusSubtitleLabel.topAnchor.constraint(equalTo: geniusLabel.bottomAnchor, constant: 10),
+            geniusSubtitleLabel.leadingAnchor.constraint(equalTo: geniusView.leadingAnchor, constant: 50),
+            
+            geniusButton.bottomAnchor.constraint(equalTo: geniusView.bottomAnchor, constant: -20),
+            geniusButton.centerXAnchor.constraint(equalTo: geniusView.centerXAnchor),
+            geniusButton.widthAnchor.constraint(equalTo: geniusView.widthAnchor, multiplier: 0.8),
+            geniusButton.heightAnchor.constraint(equalToConstant: 20),
             
             ebookView.topAnchor.constraint(equalTo: geniusView.bottomAnchor, constant: 20),
             ebookView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
