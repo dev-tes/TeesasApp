@@ -137,7 +137,7 @@ class RegisterViewController: UIViewController {
     let maleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "male"
+        label.text = "Male"
         label.font = UIFont.systemFont(ofSize: 15)
         return label
     }()
@@ -156,7 +156,7 @@ class RegisterViewController: UIViewController {
     let femaleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Great to see you again!"
+        label.text = "Female"
         label.font = UIFont.systemFont(ofSize: 15)
         return label
     }()
@@ -168,10 +168,20 @@ class RegisterViewController: UIViewController {
         return button
     }()
     
+    let stackView: UIStackView = {
+      let stacks = UIStackView()
+      stacks.axis = NSLayoutConstraint.Axis.horizontal
+      stacks.distribution = UIStackView.Distribution.equalSpacing
+      stacks.alignment = UIStackView.Alignment.center
+      stacks.spacing = 8.0
+      stacks.translatesAutoresizingMaskIntoConstraints = false
+      return stacks
+    }()
+    
     let privacyLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Great to see you again!"
+        label.text = "Privacy Policy"
         label.font = UIFont.systemFont(ofSize: 15)
         return label
     }()
@@ -179,7 +189,7 @@ class RegisterViewController: UIViewController {
     let andLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Great to see you again!"
+        label.text = "and"
         label.font = UIFont.systemFont(ofSize: 15)
         return label
     }()
@@ -187,7 +197,7 @@ class RegisterViewController: UIViewController {
     let tAndCLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "Great to see you again!"
+        label.text = "T&C"
         label.font = UIFont.systemFont(ofSize: 15)
         return label
     }()
@@ -213,11 +223,14 @@ class RegisterViewController: UIViewController {
         contentView.addSubview(dateOfBirthTextField)
                 contentView.addSubview(mRadioButton)
                 contentView.addSubview(maleLabel)
-        //        contentView.addSubview(footnoteLabel)
-        //        contentView.addSubview(footnoteLabel)
-        //        contentView.addSubview(footnoteLabel)
-        //        contentView.addSubview(footnoteLabel)
-        //        contentView.addSubview(footnoteLabel)
+                contentView.addSubview(fRadioButton)
+                contentView.addSubview(femaleLabel)
+                contentView.addSubview(registerButton)
+                contentView.addSubview(stackView)
+        
+        stackView.addArrangedSubview(privacyLabel)
+        stackView.addArrangedSubview(andLabel)
+        stackView.addArrangedSubview(tAndCLabel)
         //        contentView.addSubview(footnoteLabel)
         NSLayoutConstraint.activate([
             backButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 20),
@@ -234,7 +247,7 @@ class RegisterViewController: UIViewController {
             contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor),
             contentView.topAnchor.constraint(equalTo: scrollView.topAnchor),
             contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor),
-            contentView.heightAnchor.constraint(equalToConstant: 1300),
+//            contentView.heightAnchor.constraint(equalToConstant: 1300),
             
             footnoteLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 5),
             footnoteLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 20),
@@ -279,8 +292,23 @@ class RegisterViewController: UIViewController {
             mRadioButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             
             maleLabel.topAnchor.constraint(equalTo: mRadioButton.topAnchor, constant: 0),
-            maleLabel.leadingAnchor.constraint(equalTo: mRadioButton.trailingAnchor, constant: 20),
+            maleLabel.leadingAnchor.constraint(equalTo: mRadioButton.trailingAnchor, constant: 10),
             
+            fRadioButton.topAnchor.constraint(equalTo: dateOfBirthTextField.bottomAnchor, constant: 20),
+            fRadioButton.leadingAnchor.constraint(equalTo: maleLabel.trailingAnchor, constant: 30),
+            
+            femaleLabel.topAnchor.constraint(equalTo: mRadioButton.topAnchor),
+            femaleLabel.leadingAnchor.constraint(equalTo: fRadioButton.trailingAnchor, constant: 10),
+            
+            
+            registerButton.topAnchor.constraint(equalTo: dateOfBirthTextField.bottomAnchor, constant: 120),
+            registerButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            registerButton.heightAnchor.constraint(equalToConstant: 60),
+            registerButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.6),
+            
+            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            stackView.topAnchor.constraint(equalTo: registerButton.bottomAnchor, constant: 20),
+            stackView.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -20)
         ])
     }
     
@@ -300,14 +328,18 @@ class RegisterViewController: UIViewController {
     
     @objc func toggleCheckboxSelection() {
         mRadioButton.isSelected = !mRadioButton.isSelected
+        fRadioButton.isSelected = !fRadioButton.isSelected
         
-        if mRadioButton.isSelected == true {
-            fRadioButton.isSelected = false
+        DispatchQueue.main.async {
+            if self.mRadioButton.isSelected == true {
+                self.fRadioButton.isSelected = false
+            }
+            
+            if self.fRadioButton.isSelected == true {
+                self.mRadioButton.isSelected = false
+            }
         }
         
-        if fRadioButton.isSelected == true {
-            mRadioButton.isSelected = false
-        }
     }
 }
 
