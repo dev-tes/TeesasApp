@@ -57,10 +57,36 @@ class HomeViewController: UIViewController {
     
     let profileImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "map.circle.fill")
+        imageView.image = UIImage(systemName: "brain.head.profile")
         imageView.contentMode = .scaleAspectFit
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
+    }()
+    
+    let userNameLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Tes"
+        label.font = UIFont.boldSystemFont(ofSize: 20)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    let greetingsLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Good Morning"
+        label.font = UIFont.systemFont(ofSize: 15)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 3
+        return label
+    }()
+    
+    var buyNowButton: GreenButton = {
+        let button = GreenButton()
+        button.setTitle("Buy Now", for: .normal)
+        button.layer.cornerRadius = 13
+        button.setTitleColor(.black, for: .normal)
+        button.backgroundColor = .white
+        return button
     }()
     
     let ibibioView: UIView = {
@@ -273,6 +299,9 @@ class HomeViewController: UIViewController {
         scrollView.addSubview(contentView)
         contentView.addSubview(profileView)
         profileView.addSubview(profileImageView)
+        profileView.addSubview(greetingsLabel)
+        profileView.addSubview(userNameLabel)
+        profileView.addSubview(buyNowButton)
         contentView.addSubview(ibibioView)
         contentView.addSubview(biniView)
         contentView.addSubview(ijawView)
@@ -328,6 +357,17 @@ class HomeViewController: UIViewController {
             profileImageView.leadingAnchor.constraint(equalTo: profileView.leadingAnchor, constant: 10),
             profileImageView.widthAnchor.constraint(equalToConstant: 80),
             profileImageView.heightAnchor.constraint(equalToConstant: 100),
+            
+            greetingsLabel.topAnchor.constraint(equalTo: profileImageView.topAnchor, constant: 20),
+            greetingsLabel.leadingAnchor.constraint(equalTo: profileImageView.trailingAnchor, constant: 20),
+            
+            userNameLabel.bottomAnchor.constraint(equalTo: profileImageView.bottomAnchor, constant: -20),
+            userNameLabel.leadingAnchor.constraint(equalTo: greetingsLabel.leadingAnchor),
+            
+            buyNowButton.widthAnchor.constraint(equalToConstant: 100),
+            buyNowButton.heightAnchor.constraint(equalToConstant: 30),
+            buyNowButton.trailingAnchor.constraint(equalTo: profileView.trailingAnchor, constant: -20),
+            buyNowButton.topAnchor.constraint(equalTo: greetingsLabel.topAnchor, constant: -0),
             
             ibibioView.topAnchor.constraint(equalTo: profileView.bottomAnchor, constant: 8),
             ibibioView.trailingAnchor.constraint(equalTo: contentView.centerXAnchor, constant: -10),

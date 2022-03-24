@@ -256,50 +256,50 @@ class RegisterViewController: UIViewController {
             nameTextField.leadingAnchor.constraint(equalTo: footnoteLabel.leadingAnchor),
             nameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             
-            phoneNumberTextField.topAnchor.constraint(equalTo: nameTextField.bottomAnchor, constant: 20),
+            phoneNumberTextField.topAnchor.constraint(equalTo: nameTextField.bottomAnchor, constant: 30),
             phoneNumberTextField.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             phoneNumberTextField.heightAnchor.constraint(equalToConstant: 50),
             phoneNumberTextField.leadingAnchor.constraint(equalTo: footnoteLabel.leadingAnchor),
             phoneNumberTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             
-            emailTextField.topAnchor.constraint(equalTo: phoneNumberTextField.bottomAnchor, constant: 20),
+            emailTextField.topAnchor.constraint(equalTo: phoneNumberTextField.bottomAnchor, constant: 30),
             emailTextField.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             emailTextField.heightAnchor.constraint(equalToConstant: 50),
             emailTextField.leadingAnchor.constraint(equalTo: footnoteLabel.leadingAnchor),
             emailTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             
-            passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 20),
+            passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 30),
             passwordTextField.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             passwordTextField.heightAnchor.constraint(equalToConstant: 50),
             passwordTextField.leadingAnchor.constraint(equalTo: footnoteLabel.leadingAnchor),
             passwordTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             
-            cityTextField.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 20),
+            cityTextField.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 30),
             cityTextField.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             cityTextField.heightAnchor.constraint(equalToConstant: 50),
             cityTextField.leadingAnchor.constraint(equalTo: footnoteLabel.leadingAnchor),
             cityTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             
-            dateOfBirthTextField.topAnchor.constraint(equalTo: cityTextField.bottomAnchor, constant: 20),
+            dateOfBirthTextField.topAnchor.constraint(equalTo: cityTextField.bottomAnchor, constant: 30),
             dateOfBirthTextField.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
             dateOfBirthTextField.heightAnchor.constraint(equalToConstant: 50),
             dateOfBirthTextField.leadingAnchor.constraint(equalTo: footnoteLabel.leadingAnchor),
             dateOfBirthTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             
-            mRadioButton.topAnchor.constraint(equalTo: dateOfBirthTextField.bottomAnchor, constant: 20),
+            mRadioButton.topAnchor.constraint(equalTo: dateOfBirthTextField.bottomAnchor, constant: 25),
             mRadioButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             
             maleLabel.topAnchor.constraint(equalTo: mRadioButton.topAnchor, constant: 0),
             maleLabel.leadingAnchor.constraint(equalTo: mRadioButton.trailingAnchor, constant: 10),
             
-            fRadioButton.topAnchor.constraint(equalTo: dateOfBirthTextField.bottomAnchor, constant: 20),
+            fRadioButton.topAnchor.constraint(equalTo: mRadioButton.topAnchor),
             fRadioButton.leadingAnchor.constraint(equalTo: maleLabel.trailingAnchor, constant: 30),
             
             femaleLabel.topAnchor.constraint(equalTo: mRadioButton.topAnchor),
             femaleLabel.leadingAnchor.constraint(equalTo: fRadioButton.trailingAnchor, constant: 10),
             
             
-            registerButton.topAnchor.constraint(equalTo: dateOfBirthTextField.bottomAnchor, constant: 120),
+            registerButton.topAnchor.constraint(equalTo: dateOfBirthTextField.bottomAnchor, constant: 140),
             registerButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             registerButton.heightAnchor.constraint(equalToConstant: 60),
             registerButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.6),

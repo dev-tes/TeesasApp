@@ -13,9 +13,9 @@
 		04050F9B27E8E1CE00396D9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04050F9A27E8E1CE00396D9D /* Assets.xcassets */; };
 		04050F9E27E8E1CE00396D9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04050F9C27E8E1CE00396D9D /* LaunchScreen.storyboard */; };
 		04050FA927E8E1CE00396D9D /* TeesasAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04050FA827E8E1CE00396D9D /* TeesasAppTests.swift */; };
-		04050FB527E8E1CE00396D9D /* TeesasAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04050FB427E8E1CE00396D9D /* TeesasAppUITestsLaunchTests.swift */; };
 		04050FC227E8E79A00396D9D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04050FC127E8E79A00396D9D /* LoginViewController.swift */; };
 		045A3C0B27EBD1F600B16DE0 /* Json.json in Resources */ = {isa = PBXBuildFile; fileRef = 045A3C0A27EBD1F600B16DE0 /* Json.json */; };
+		04A61FF827ED31160016A0FE /* MainTabBarViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A61FF727ED31160016A0FE /* MainTabBarViewControllerTests.swift */; };
 		04D5CEB027E919EF0067043F /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5CEAF27E919EF0067043F /* MainTabBarViewController.swift */; };
 		04D5CEB227E91A2E0067043F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5CEB127E91A2E0067043F /* HomeViewController.swift */; };
 		04D5CEB427E91A3C0067043F /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5CEB327E91A3C0067043F /* BookmarkViewController.swift */; };
@@ -37,13 +37,6 @@
 			remoteGlobalIDString = 04050F8D27E8E1CC00396D9D;
 			remoteInfo = TeesasApp;
 		};
-		04050FAF27E8E1CE00396D9D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 04050F8627E8E1CC00396D9D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 04050F8D27E8E1CC00396D9D;
-			remoteInfo = TeesasApp;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -56,10 +49,9 @@
 		04050F9F27E8E1CE00396D9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04050FA427E8E1CE00396D9D /* TeesasAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeesasAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04050FA827E8E1CE00396D9D /* TeesasAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeesasAppTests.swift; sourceTree = "<group>"; };
-		04050FAE27E8E1CE00396D9D /* TeesasAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeesasAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		04050FB427E8E1CE00396D9D /* TeesasAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeesasAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		04050FC127E8E79A00396D9D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		045A3C0A27EBD1F600B16DE0 /* Json.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Json.json; sourceTree = "<group>"; };
+		04A61FF727ED31160016A0FE /* MainTabBarViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewControllerTests.swift; sourceTree = "<group>"; };
 		04D5CEAF27E919EF0067043F /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		04D5CEB127E91A2E0067043F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		04D5CEB327E91A3C0067043F /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
@@ -88,13 +80,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		04050FAB27E8E1CE00396D9D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -103,7 +88,6 @@
 			children = (
 				04050F9027E8E1CC00396D9D /* TeesasApp */,
 				04050FA727E8E1CE00396D9D /* TeesasAppTests */,
-				04050FB127E8E1CE00396D9D /* TeesasAppUITests */,
 				04050F8F27E8E1CC00396D9D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -113,7 +97,6 @@
 			children = (
 				04050F8E27E8E1CC00396D9D /* TeesasApp.app */,
 				04050FA427E8E1CE00396D9D /* TeesasAppTests.xctest */,
-				04050FAE27E8E1CE00396D9D /* TeesasAppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -135,17 +118,10 @@
 		04050FA727E8E1CE00396D9D /* TeesasAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				04A61FF727ED31160016A0FE /* MainTabBarViewControllerTests.swift */,
 				04050FA827E8E1CE00396D9D /* TeesasAppTests.swift */,
 			);
 			path = TeesasAppTests;
-			sourceTree = "<group>";
-		};
-		04050FB127E8E1CE00396D9D /* TeesasAppUITests */ = {
-			isa = PBXGroup;
-			children = (
-				04050FB427E8E1CE00396D9D /* TeesasAppUITestsLaunchTests.swift */,
-			);
-			path = TeesasAppUITests;
 			sourceTree = "<group>";
 		};
 		04D5CEB927E91B270067043F /* Dashboard */ = {
@@ -246,24 +222,6 @@
 			productReference = 04050FA427E8E1CE00396D9D /* TeesasAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		04050FAD27E8E1CE00396D9D /* TeesasAppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 04050FBE27E8E1CE00396D9D /* Build configuration list for PBXNativeTarget "TeesasAppUITests" */;
-			buildPhases = (
-				04050FAA27E8E1CE00396D9D /* Sources */,
-				04050FAB27E8E1CE00396D9D /* Frameworks */,
-				04050FAC27E8E1CE00396D9D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				04050FB027E8E1CE00396D9D /* PBXTargetDependency */,
-			);
-			name = TeesasAppUITests;
-			productName = TeesasAppUITests;
-			productReference = 04050FAE27E8E1CE00396D9D /* TeesasAppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -278,10 +236,6 @@
 						CreatedOnToolsVersion = 13.2.1;
 					};
 					04050FA327E8E1CE00396D9D = {
-						CreatedOnToolsVersion = 13.2.1;
-						TestTargetID = 04050F8D27E8E1CC00396D9D;
-					};
-					04050FAD27E8E1CE00396D9D = {
 						CreatedOnToolsVersion = 13.2.1;
 						TestTargetID = 04050F8D27E8E1CC00396D9D;
 					};
@@ -302,7 +256,6 @@
 			targets = (
 				04050F8D27E8E1CC00396D9D /* TeesasApp */,
 				04050FA327E8E1CE00396D9D /* TeesasAppTests */,
-				04050FAD27E8E1CE00396D9D /* TeesasAppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -319,13 +272,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		04050FA227E8E1CE00396D9D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		04050FAC27E8E1CE00396D9D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -362,14 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04050FA927E8E1CE00396D9D /* TeesasAppTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		04050FAA27E8E1CE00396D9D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				04050FB527E8E1CE00396D9D /* TeesasAppUITestsLaunchTests.swift in Sources */,
+				04A61FF827ED31160016A0FE /* MainTabBarViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,11 +319,6 @@
 			isa = PBXTargetDependency;
 			target = 04050F8D27E8E1CC00396D9D /* TeesasApp */;
 			targetProxy = 04050FA527E8E1CE00396D9D /* PBXContainerItemProxy */;
-		};
-		04050FB027E8E1CE00396D9D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 04050F8D27E8E1CC00396D9D /* TeesasApp */;
-			targetProxy = 04050FAF27E8E1CE00396D9D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -610,42 +544,6 @@
 			};
 			name = Release;
 		};
-		04050FBF27E8E1CE00396D9D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L5KQK28X5U;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dev-tes.TeesasAppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TeesasApp;
-			};
-			name = Debug;
-		};
-		04050FC027E8E1CE00396D9D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L5KQK28X5U;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dev-tes.TeesasAppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = TeesasApp;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -672,15 +570,6 @@
 			buildConfigurations = (
 				04050FBC27E8E1CE00396D9D /* Debug */,
 				04050FBD27E8E1CE00396D9D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		04050FBE27E8E1CE00396D9D /* Build configuration list for PBXNativeTarget "TeesasAppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				04050FBF27E8E1CE00396D9D /* Debug */,
-				04050FC027E8E1CE00396D9D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
