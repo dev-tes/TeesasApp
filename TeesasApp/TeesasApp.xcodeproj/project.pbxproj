@@ -12,7 +12,6 @@
 		04050F9627E8E1CC00396D9D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04050F9527E8E1CC00396D9D /* RegisterViewController.swift */; };
 		04050F9B27E8E1CE00396D9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04050F9A27E8E1CE00396D9D /* Assets.xcassets */; };
 		04050F9E27E8E1CE00396D9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04050F9C27E8E1CE00396D9D /* LaunchScreen.storyboard */; };
-		04050FA927E8E1CE00396D9D /* TeesasAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04050FA827E8E1CE00396D9D /* TeesasAppTests.swift */; };
 		04050FC227E8E79A00396D9D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04050FC127E8E79A00396D9D /* LoginViewController.swift */; };
 		045A3C0B27EBD1F600B16DE0 /* Json.json in Resources */ = {isa = PBXBuildFile; fileRef = 045A3C0A27EBD1F600B16DE0 /* Json.json */; };
 		04A61FF827ED31160016A0FE /* MainTabBarViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A61FF727ED31160016A0FE /* MainTabBarViewControllerTests.swift */; };
@@ -48,7 +47,6 @@
 		04050F9D27E8E1CE00396D9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04050F9F27E8E1CE00396D9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04050FA427E8E1CE00396D9D /* TeesasAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeesasAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		04050FA827E8E1CE00396D9D /* TeesasAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeesasAppTests.swift; sourceTree = "<group>"; };
 		04050FC127E8E79A00396D9D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		045A3C0A27EBD1F600B16DE0 /* Json.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Json.json; sourceTree = "<group>"; };
 		04A61FF727ED31160016A0FE /* MainTabBarViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewControllerTests.swift; sourceTree = "<group>"; };
@@ -119,7 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				04A61FF727ED31160016A0FE /* MainTabBarViewControllerTests.swift */,
-				04050FA827E8E1CE00396D9D /* TeesasAppTests.swift */,
 			);
 			path = TeesasAppTests;
 			sourceTree = "<group>";
@@ -307,7 +304,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04050FA927E8E1CE00396D9D /* TeesasAppTests.swift in Sources */,
 				04A61FF827ED31160016A0FE /* MainTabBarViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
