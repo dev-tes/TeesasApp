@@ -14,6 +14,7 @@
 		04050F9E27E8E1CE00396D9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04050F9C27E8E1CE00396D9D /* LaunchScreen.storyboard */; };
 		04050FC227E8E79A00396D9D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04050FC127E8E79A00396D9D /* LoginViewController.swift */; };
 		04A61FF827ED31160016A0FE /* MainTabBarViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A61FF727ED31160016A0FE /* MainTabBarViewControllerTests.swift */; };
+		04A61FFA27EDB8EA0016A0FE /* HomeViewControllerTestClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A61FF927EDB8EA0016A0FE /* HomeViewControllerTestClass.swift */; };
 		04D5CEB027E919EF0067043F /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5CEAF27E919EF0067043F /* MainTabBarViewController.swift */; };
 		04D5CEB227E91A2E0067043F /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5CEB127E91A2E0067043F /* HomeViewController.swift */; };
 		04D5CEB427E91A3C0067043F /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D5CEB327E91A3C0067043F /* BookmarkViewController.swift */; };
@@ -47,6 +48,7 @@
 		04050FA427E8E1CE00396D9D /* TeesasAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TeesasAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04050FC127E8E79A00396D9D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		04A61FF727ED31160016A0FE /* MainTabBarViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewControllerTests.swift; sourceTree = "<group>"; };
+		04A61FF927EDB8EA0016A0FE /* HomeViewControllerTestClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewControllerTestClass.swift; sourceTree = "<group>"; };
 		04D5CEAF27E919EF0067043F /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		04D5CEB127E91A2E0067043F /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		04D5CEB327E91A3C0067043F /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 		04050FA727E8E1CE00396D9D /* TeesasAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				04A61FF927EDB8EA0016A0FE /* HomeViewControllerTestClass.swift */,
 				04A61FF727ED31160016A0FE /* MainTabBarViewControllerTests.swift */,
 			);
 			path = TeesasAppTests;
@@ -296,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04A61FFA27EDB8EA0016A0FE /* HomeViewControllerTestClass.swift in Sources */,
 				04A61FF827ED31160016A0FE /* MainTabBarViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

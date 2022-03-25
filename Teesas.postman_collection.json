@@ -1,0 +1,30 @@
+{
+	"info": {
+		"_postman_id": "9cb30cdf-faa7-49fe-a422-93590978727b",
+		"name": "Teesas",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Teesas Signup Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://run.mocky.io/v3/1a2eae07-997f-4edc-a756-563e3e4536e4",
+					"protocol": "https",
+					"host": [
+						"run",
+						"mocky",
+						"io"
+					],
+					"path": [
+						"v3",
+						"1a2eae07-997f-4edc-a756-563e3e4536e4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
