@@ -118,7 +118,6 @@ class LoginViewController: UIViewController {
         button.setImage(UIImage(systemName: "f.circle.fill"), for: .normal)
         button.setTitle(" facebook", for: .normal)
         button.setTitleColor(.black, for: .normal)
-        button.addLeading(image: "g.square.fill", text: "Google")
         button.layer.borderWidth = 0.5
         button.layer.cornerRadius = 20
         return button

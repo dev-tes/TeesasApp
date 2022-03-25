@@ -56,6 +56,7 @@ class RegisterViewController: UIViewController {
         textField.layer.backgroundColor = UIColor.white.cgColor
         textField.setPadding(left: 20, right: 20)
         textField.placeholder = "Enter Name"
+        textField.autocorrectionType = .no
         textField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         return textField
     }()
@@ -69,6 +70,7 @@ class RegisterViewController: UIViewController {
         textField.layer.backgroundColor = UIColor.white.cgColor
         textField.setPadding(left: 20, right: 20)
         textField.placeholder = "Enter Phone Number"
+        textField.autocorrectionType = .no
         textField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         return textField
     }()
@@ -82,6 +84,8 @@ class RegisterViewController: UIViewController {
         textField.layer.backgroundColor = UIColor.white.cgColor
         textField.setPadding(left: 20, right: 20)
         textField.placeholder = "Enter Email Address"
+        textField.autocorrectionType = .no
+        textField.autocapitalizationType = .none
         textField.addTarget(self, action: #selector(textFieldDidChange), for: .editingChanged)
         return textField
     }()
@@ -94,6 +98,7 @@ class RegisterViewController: UIViewController {
         textField.layer.cornerRadius = 25
         textField.layer.backgroundColor = UIColor.white.cgColor
         textField.setPadding(left: 20, right: 20)
+        textField.autocorrectionType = .no
         textField.isSecureTextEntry = true
         textField.placeholder = "Enter Password"
         return textField
@@ -107,6 +112,7 @@ class RegisterViewController: UIViewController {
         textField.layer.cornerRadius = 25
         textField.layer.backgroundColor = UIColor.white.cgColor
         textField.setPadding(left: 20, right: 20)
+        textField.autocorrectionType = .no
         textField.placeholder = "City / Nearest Location"
         return textField
     }()
@@ -118,6 +124,7 @@ class RegisterViewController: UIViewController {
         textField.layer.borderColor = UIColor.black.cgColor
         textField.layer.cornerRadius = 25
         textField.layer.backgroundColor = UIColor.white.cgColor
+        textField.autocorrectionType = .no
         textField.setPadding(left: 20, right: 20)
         textField.placeholder = "Date of Birth"
         return textField
@@ -334,16 +341,18 @@ class RegisterViewController: UIViewController {
     }
     
     func getResponse(completion:((APIResponse) -> Void)){
-        let url = URL(string: "https://run.mocky.io/v3/1a2eae07-997f-4edc-a756-563e3e4536e4")!
-        
-        //        var request = URLRequest(url: url)
-        //
-        //        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+        let url = URL(string: "https://run.mocky.io/v3/c8eb4688-cbd0-4c42-bf5c-6f2077a927a9")!
         
         let task = URLSession.shared.dataTask(with: url) { data, response, error in
             if let data = data {
-                if let status = try? JSONDecoder().decode(APIResponse.self, from: data) {
-                    print(status)
+                if let response = try? JSONDecoder().decode(APIResponse.self, from: data) {
+                    print(response.message)
+                    if response.status == true {
+                        DispatchQueue.main.async { [weak self] in
+                            let viewController = MainTabBarViewController()
+                            self?.navigationController?.pushViewController(viewController, animated: true)
+                        }
+                    }
                 } else {
                     print("Invalid Response")
                 }
@@ -352,21 +361,6 @@ class RegisterViewController: UIViewController {
             }
         }
         task.resume()
-    }
-    
-    func load(completionHandler: ((APIResponse) -> Void)?) {         //loading data from parser using closures
-        if let fileLocation = Bundle.main.url(forResource: "Json", withExtension: "json") {
-            // do catch in case of an error
-            do {
-                let data = try Data(contentsOf: fileLocation)
-                let jsonDecoder = JSONDecoder()
-                let dataFromJson = try jsonDecoder.decode(APIResponse.self, from: data)
-
-                completionHandler?(dataFromJson)
-            } catch {
-                print("\(error)")
-            }
-        }
     }
     
     @objc func backButtonPressed() {
@@ -378,17 +372,10 @@ class RegisterViewController: UIViewController {
     
     @objc func didTapRegisterButton() {
         if validateFields() == true {
-//            getResponse { APIResponse in
-//                print(APIResponse.status)
-//                if APIResponse.status == true {
-//                    self.navigationController?.pushViewController(MainTabBarViewController(), animated: true)
-//                }
-//            }
-            
-            
-            load { APIResponse in
-                print(APIResponse.status)
-                if APIResponse.status == true {
+            getResponse { apiResponse in
+                print(apiResponse.status)
+                print(apiResponse.message)
+                if apiResponse.status == true {
                     self.navigationController?.pushViewController(MainTabBarViewController(), animated: true)
                 }
             }

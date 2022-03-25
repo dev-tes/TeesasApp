@@ -63,7 +63,7 @@ class HomeViewController: UIViewController {
         return imageView
     }()
     
-    let userNameLabel: UILabel = {
+    var userNameLabel: UILabel = {
         let label = UILabel()
         label.text = "Tes"
         label.font = UIFont.boldSystemFont(ofSize: 20)
@@ -473,6 +473,4 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell.layer.masksToBounds = true
         return cell
     }
-    
-    
 }

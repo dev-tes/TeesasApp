@@ -9,4 +9,5 @@ import UIKit
 
 struct APIResponse: Codable {
     let status: Bool
+    let message: String
 }
