@@ -1,3 +1,4 @@
 # TeesasApp
 
-[Teesas App Demo](https://github.com/dev-tes/TeesasApp/issues/1#issue-1182093905)
+Find below a short demo of the app.
+[Teesas App Demo](https://drive.google.com/file/d/1_DKknV_OoWFcHssiRAY8CsLVdOTlzhN-/view?usp=sharing)
