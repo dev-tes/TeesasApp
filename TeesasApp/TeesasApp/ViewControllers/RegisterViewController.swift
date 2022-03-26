@@ -14,6 +14,7 @@ class RegisterViewController: UIViewController {
         button.setImage(UIImage(systemName: "arrow.left"), for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(backButtonPressed), for: .touchUpInside)
+        button.tintColor = .black
         return button
     }()
     
