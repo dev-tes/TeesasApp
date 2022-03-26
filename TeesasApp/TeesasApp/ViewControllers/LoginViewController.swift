@@ -82,6 +82,7 @@ class LoginViewController: UIViewController {
     var loginButton: GreenButton = {
         let button = GreenButton()
         button.setTitle("Login", for: .normal)
+        button.backgroundColor = .systemGreen
         button.addTarget(self, action: #selector(didTapLoginButton), for: .touchUpInside)
         return button
     }()
